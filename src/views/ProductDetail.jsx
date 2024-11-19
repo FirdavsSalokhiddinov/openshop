@@ -10,6 +10,7 @@ import vr from '../assets/others/vr.svg';
 const ProductDetailPage = () => {
     return (
         <div className='ProductDetailPage'>
+            
             <Nav className='justify-content-center'>
                 <div className='d-flex align-items-center'>
                 <NavDropdown id="nav-dropdown-dark-example" title="Cell Phones & Tablets">

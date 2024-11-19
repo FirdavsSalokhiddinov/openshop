@@ -21,7 +21,7 @@
     ],
     "products": [
       {
-        "product_id": "1",
+        "id": "1",
         "name": "iPhone 12 Pro Max 128GB (Gray)",
         "description": "lorem ipsum...",
         "manufacturer_id": "2",
@@ -31,7 +31,7 @@
         "imageSrc": "iphone/iphone1.png"
       },
       {
-        "product_id": "2",
+        "id": "2",
         "name": "iPhone 11 Pro 128GB (Blue)",
         "description": "lorem ipsum...",
         "manufacturer_id": "2",
@@ -41,7 +41,7 @@
         "imageSrc": "iphone/iphone2.png"
       },
       {
-        "product_id": "3",
+        "id": "3",
         "name": "iPhone 12 Pro 256GB (Red)",
         "description": "lorem ipsum...",
         "manufacturer_id": "2",
@@ -51,7 +51,7 @@
         "imageSrc": "iphone/iphone3.png"
       },
       {
-        "product_id": "4",
+        "id": "4",
         "name": "iPhone 11 Pro Max 256GB (Yellow)",
         "description": "lorem ipsum...",
         "manufacturer_id": "2",
@@ -61,7 +61,7 @@
         "imageSrc": "iphone/iphone4.png"
       },
       {
-        "product_id": "5",
+        "id": "5",
         "name": "Samsung Galaxy A51 4/64GB (Black)",
         "description": "lorem ipsum...",
         "manufacturer_id": "3",
@@ -71,7 +71,7 @@
         "imageSrc": "samsung/phone1.png"
       },
       {
-        "product_id": "6",
+        "id": "6",
         "name": "Samsung Galaxy A21S 3/32GB (Blue)",
         "description": "lorem ipsum...",
         "manufacturer_id": "3",
@@ -81,7 +81,7 @@
         "imageSrc": "samsung/phone2.png"
       },
       {
-        "product_id": "7",
+        "id": "7",
         "name": "Samsung Galaxy S10Lite 6/128GB (Blue)",
         "description": "lorem ipsum...",
         "manufacturer_id": "3",
@@ -91,7 +91,7 @@
         "imageSrc": "samsung/phone3.png"
       },
       {
-        "product_id": "8",
+        "id": "8",
         "name": "Samsung Galaxy A41 4/64GB (Blue)",
         "description": "lorem ipsum...",
         "manufacturer_id": "3",
@@ -101,7 +101,7 @@
         "imageSrc": "samsung/phone4.png"
       },
       {
-        "product_id": "9",
+        "id": "9",
         "name": "Mi 10t Pro 8/256GB (Blue)",
         "description": "lorem ipsum...",
         "manufacturer_id": "1",
@@ -111,7 +111,7 @@
         "imageSrc": "xiaomi/phone1.png"
       },
       {
-        "product_id": "10",
+        "id": "10",
         "name": "Xiaomi mi 10t Pro 8/256GB (Silver)",
         "description": "lorem ipsum...",
         "manufacturer_id": "1",
@@ -121,7 +121,7 @@
         "imageSrc": "xiaomi/phone2.png"
       },
       {
-        "product_id": "11",
+        "id": "11",
         "name": "Mi 10 Lite 6/64GB (Blue)",
         "description": "lorem ipsum...",
         "manufacturer_id": "1",
@@ -131,7 +131,7 @@
         "imageSrc": "xiaomi/phone3.png"
       },
       {
-        "product_id": "12",
+        "id": "12",
         "name": "Mi 10 Lite 4/64GB (Blue)",
         "description": "lorem ipsum...",
         "manufacturer_id": "1",
