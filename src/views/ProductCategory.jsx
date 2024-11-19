@@ -18,65 +18,34 @@ import xiaomi3 from '../assets/xiaomi/phone3.png';
 import xiaomi4 from '../assets/xiaomi/phone4.png';
 import xbox from '../assets/xbox.png';
 
+import NavigationBar from './NavigationBar';
+
+import db from '../assets/db/ProductDB.json';
+import { useParams } from 'react-router-dom';
+
 const ProductCategoryPage = () => {
+
+    const { categoryId, manufacturerId } = useParams();
+ 
     return (
         <div className='ProductCategoryPage'>
-            <Nav className='justify-content-center'>
-                <div className='d-flex align-items-center'>
-                <NavDropdown id="nav-dropdown-dark-example" title="Cell Phones & Tablets">
-                    <div className="d-flex justify-content-between navdropdown" id="navdropdown" style={{ width: '100%' }}>
-                    <div>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>Cell Phones</NavDropdown.Item>
-                        <DropdownDivider/>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>Xiaomi</NavDropdown.Item>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>Apple</NavDropdown.Item>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>Samsung</NavDropdown.Item>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>Huawei</NavDropdown.Item>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>BQ</NavDropdown.Item>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>Nokia</NavDropdown.Item>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>Inoi</NavDropdown.Item>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>Vivo</NavDropdown.Item>
-                    </div>
-                    <div className="ms-auto"> {/* 'ms-auto' pushes this div to the right */}
-                        <NavDropdown.Item href="/productcategory" style={{textDecoration:'none', color:'#333'}}>Action</NavDropdown.Item>
-                        <DropdownDivider/>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>Xiami</NavDropdown.Item>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>Apple</NavDropdown.Item>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>Samsung</NavDropdown.Item>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>Huawei</NavDropdown.Item>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>BQ</NavDropdown.Item>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>More...</NavDropdown.Item>
-                    </div>
-                    </div>
-                </NavDropdown>
+            <div>
+                <div>{categoryId}</div>
+                <div>{manufacturerId}</div>
+            </div>
+            <NavigationBar />
 
-                <NavDropdown id="nav-dropdown-dark-example" title="Computers & Laptop">
-                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                </NavDropdown>
-                <NavDropdown id="nav-dropdown-dark-example" title="TV & Video">
-                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                </NavDropdown>
-                <NavDropdown id="nav-dropdown-dark-example" title="Accessories">
-                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                </NavDropdown>
-                <NavDropdown id="nav-dropdown-dark-example" title="Home Appliance">
-                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                </NavDropdown>
-                <NavDropdown id="nav-dropdown-dark-example" title="Video Games & Consoles">
-                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                </NavDropdown>
-                </div>
-            </Nav>
+            <Carousel data-bs-theme="dark">
+                {db.products.filter(x => x.category_id == categoryId && x.manufacturer_id == manufacturerId).map((product, index) => (
+                    <Carousel.Item key={"carousel-" + index}>
+                        <img className="d-block w-100" src={carousel1} alt={`Slide ${index + 1}`} />{/* require(product.imageSrc).default */}
+                        <Carousel.Caption>
+                            <h5>{product.name || "First slide label"}</h5>
+                            <p>{product.description || "Des"}</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                ))}
+        </Carousel>
 
             <Carousel data-bs-theme="dark">
                 <Carousel.Item>

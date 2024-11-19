@@ -1,7 +1,6 @@
 import '../App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Container, Nav, NavDropdown, Row, Col, Button, DropdownDivider, Carousel, Image } from 'react-bootstrap';
+import {Container, Row, Col, Button, Carousel, Image } from 'react-bootstrap';
 import carousel1 from '../assets/Carousel1.svg';
 import carousel2 from '../assets/Carousel2.svg';
 import carousel3 from '../assets/Carousel3.svg';
@@ -22,67 +21,13 @@ import top2 from '../assets/top/top2.png';
 import top3 from '../assets/top/top3.png';
 import top4 from '../assets/top/top4.png';
 import ps from '../assets/playstationimg.svg';
+import NavigationBar from '../views/NavigationBar';
 
 
 const HomePage = () => {
     return (
         <div className="Home">
-            <Nav className='justify-content-center'>
-                <div className='d-flex align-items-center'>
-                <NavDropdown id="nav-dropdown-dark-example" title="Cell Phones & Tablets">
-                    <div className="d-flex justify-content-between navdropdown" id="navdropdown" style={{ width: '100%' }}>
-                    <div>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>Cell Phones</NavDropdown.Item>
-                        <DropdownDivider/>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>Xiaomi</NavDropdown.Item>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>Apple</NavDropdown.Item>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>Samsung</NavDropdown.Item>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>Huawei</NavDropdown.Item>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>BQ</NavDropdown.Item>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>Nokia</NavDropdown.Item>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>Inoi</NavDropdown.Item>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>Vivo</NavDropdown.Item>
-                    </div>
-                    <div className="ms-auto"> {/* 'ms-auto' pushes this div to the right */}
-                        <NavDropdown.Item href="/productcategory" style={{textDecoration:'none', color:'#333'}}>Action</NavDropdown.Item>
-                        <DropdownDivider/>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>Xiami</NavDropdown.Item>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>Apple</NavDropdown.Item>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>Samsung</NavDropdown.Item>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>Huawei</NavDropdown.Item>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>BQ</NavDropdown.Item>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>More...</NavDropdown.Item>
-                    </div>
-                    </div>
-                </NavDropdown>
-
-                <NavDropdown id="nav-dropdown-dark-example" title="Computers & Laptop">
-                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                </NavDropdown>
-                <NavDropdown id="nav-dropdown-dark-example" title="TV & Video">
-                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                </NavDropdown>
-                <NavDropdown id="nav-dropdown-dark-example" title="Accessories">
-                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                </NavDropdown>
-                <NavDropdown id="nav-dropdown-dark-example" title="Home Appliance">
-                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                </NavDropdown>
-                <NavDropdown id="nav-dropdown-dark-example" title="Video Games & Consoles">
-                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                </NavDropdown>
-                </div>
-            </Nav>
+            <NavigationBar />
 
             <Carousel data-bs-theme="dark">
                 <Carousel.Item>
