@@ -27,7 +27,8 @@
         "manufacturer_id": "2",
         "category_id": "1",
         "price": 1300,
-        "stock": 150
+        "stock": 150,
+        "imageSrc": "iphone/iphone1.png"
       },
       {
         "product_id": "2",
@@ -36,7 +37,8 @@
         "manufacturer_id": "2",
         "category_id": "1",
         "price": 700,
-        "stock": 150
+        "stock": 150,
+        "imageSrc": "iphone/iphone2.png"
       },
       {
         "product_id": "3",
@@ -45,7 +47,8 @@
         "manufacturer_id": "2",
         "category_id": "1",
         "price": 1500,
-        "stock": 150
+        "stock": 150,
+        "imageSrc": "iphone/iphone3.png"
       },
       {
         "product_id": "4",
@@ -54,7 +57,8 @@
         "manufacturer_id": "2",
         "category_id": "1",
         "price": 850,
-        "stock": 150
+        "stock": 150,
+        "imageSrc": "iphone/iphone4.png"
       },
       {
         "product_id": "5",
@@ -63,7 +67,8 @@
         "manufacturer_id": "3",
         "category_id": "1",
         "price": 231,
-        "stock": 150
+        "stock": 150,
+        "imageSrc": "samsung/phone1.png"
       },
       {
         "product_id": "6",
@@ -72,7 +77,8 @@
         "manufacturer_id": "3",
         "category_id": "1",
         "price": 250,
-        "stock": 150
+        "stock": 150,
+        "imageSrc": "samsung/phone2.png"
       },
       {
         "product_id": "7",
@@ -81,7 +87,8 @@
         "manufacturer_id": "3",
         "category_id": "1",
         "price": 535,
-        "stock": 150
+        "stock": 150,
+        "imageSrc": "samsung/phone3.png"
       },
       {
         "product_id": "8",
@@ -90,7 +97,8 @@
         "manufacturer_id": "3",
         "category_id": "1",
         "price": 237,
-        "stock": 150
+        "stock": 150,
+        "imageSrc": "samsung/phone4.png"
       },
       {
         "product_id": "9",
@@ -99,7 +107,8 @@
         "manufacturer_id": "1",
         "category_id": "1",
         "price": 730,
-        "stock": 150
+        "stock": 150,
+        "imageSrc": "xiaomi/phone1.png"
       },
       {
         "product_id": "10",
@@ -108,7 +117,8 @@
         "manufacturer_id": "1",
         "category_id": "1",
         "price": 727,
-        "stock": 150
+        "stock": 150,
+        "imageSrc": "xiaomi/phone2.png"
       },
       {
         "product_id": "11",
@@ -117,7 +127,8 @@
         "manufacturer_id": "1",
         "category_id": "1",
         "price": 337,
-        "stock": 150
+        "stock": 150,
+        "imageSrc": "xiaomi/phone3.png"
       },
       {
         "product_id": "12",
@@ -126,7 +137,8 @@
         "manufacturer_id": "1",
         "category_id": "1",
         "price": 325,
-        "stock": 150
+        "stock": 150,
+        "imageSrc": "xiaomi/phone4.png"
       }
     ]
   }

@@ -30,24 +30,24 @@ const ProductCategoryPage = () => {
     return (
         <div className='ProductCategoryPage'>
             <div>
-                <div>{categoryId}</div>
-                <div>{manufacturerId}</div>
+                <h3>{db.categories.find(x => x.id == categoryId).name}</h3>
+                <p>{db.manufacturers.find(x => x.id == manufacturerId).name}</p>
             </div>
             <NavigationBar />
 
             <Carousel data-bs-theme="dark">
                 {db.products.filter(x => x.category_id == categoryId && x.manufacturer_id == manufacturerId).map((product, index) => (
-                    <Carousel.Item key={"carousel-" + index}>
-                        <img className="d-block w-100" src={carousel1} alt={`Slide ${index + 1}`} />{/* require(product.imageSrc).default */}
+                    <Carousel.Item key={"carousel-" + product.product_id}>
+                        <img className="d-block w-20" src={require("../assets/" + product.imageSrc)} alt={product.name} />
                         <Carousel.Caption>
-                            <h5>{product.name || "First slide label"}</h5>
-                            <p>{product.description || "Des"}</p>
+                            <h5>{product.name}</h5>
+                            <p>{product.description}</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                 ))}
-        </Carousel>
+            </Carousel>
 
-            <Carousel data-bs-theme="dark">
+            {/* <Carousel data-bs-theme="dark">
                 <Carousel.Item>
                 <img className="d-block w-100" src={carousel1} alt="First slide"/>
                 <Carousel.Caption>
@@ -340,7 +340,7 @@ const ProductCategoryPage = () => {
                         <Button variant="light">Next &nbsp;&gt;&gt;</Button>
                     </div>
                 </ButtonGroup>
-            </div>
+            </div> */}
 
 
         </div>

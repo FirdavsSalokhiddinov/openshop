@@ -18,15 +18,6 @@ const NavigationBar = () => {
                         })}
                     </NavDropdown>
                 ))}
-
-                {/* {db.productCategories.map((category, index1) => (
-                    <NavDropdown key={'category-' + index1} title={category.name}>
-                        {db.manufacturers.map((manufacturers, index2) => (
-                            <NavDropdown.Item key={"manufacturer-" + index2, }
-                        
-                    </NavDropdown>
-                    
-                ))} */}
             </div>
         </Navbar>
       );
