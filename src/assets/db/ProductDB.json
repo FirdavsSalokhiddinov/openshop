@@ -1,4 +1,9 @@
 {
+    "carousel": [
+      {"id": "1", "name":"phone-image", "srcImage":"phoneCarousel.svg"},
+      {"id": "2", "name":"watch-image", "srcImage":"watchCarousel.svg"},
+      {"id": "3", "name":"ps-image", "srcImage":"psCarousel.svg"}
+    ],
     "categories": [
         {"id": "1", "name": "Cell Phones"},
         {"id": "2", "name": "Tablets"},

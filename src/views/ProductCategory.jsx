@@ -1,20 +1,11 @@
 import '../App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Nav, NavDropdown, Row, Col, Button, DropdownDivider, Carousel, Image, ButtonGroup, Form} from 'react-bootstrap';
-import carousel1 from '../assets/Carousel1.svg';
-import carousel2 from '../assets/Carousel2.svg';
-import carousel3 from '../assets/Carousel3.svg';
-import samsung1 from '../assets/samsung/phone1.png';
-import samsung2 from '../assets/samsung/phone2.png';
-import samsung3 from '../assets/samsung/phone3.png';
-import samsung4 from '../assets/samsung/phone4.png';
-import xiaomi1 from '../assets/xiaomi/phone1.png';
-import xiaomi2 from '../assets/xiaomi/phone2.png';
-import xiaomi3 from '../assets/xiaomi/phone3.png';
-import xiaomi4 from '../assets/xiaomi/phone4.png';
+import {Row, Col, Button, Image} from 'react-bootstrap';
+
 import xbox from '../assets/xbox.png';
 
 import NavigationBar from './NavigationBar';
+import MyCarousel from './Carousel';
 
 import db from '../assets/db/ProductDB.json';
 import { useParams } from 'react-router-dom';
@@ -30,30 +21,7 @@ const ProductCategoryPage = () => {
     return (
         <div className='ProductCategoryPage'>
             <NavigationBar />
-
-            <Carousel data-bs-theme="dark">
-                <Carousel.Item>
-                <img className="d-block w-100" src={carousel1} alt="First slide"/>
-                <Carousel.Caption>
-                    <h5>First slide label</h5>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                <img className="d-block w-100" src={carousel2} alt="Second slide"/>
-                <Carousel.Caption>
-                    <h5>Second slide label</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                <img className="d-block w-100" src={carousel3} alt="Third slide"/>
-                <Carousel.Caption>
-                    <h5>Third slide label</h5>
-                    <p> Praesent commodo cursus magna, vel scelerisque nisl consectetur </p>
-                </Carousel.Caption>
-                </Carousel.Item>
-            </Carousel>
+            <MyCarousel />
 
             <section className="goods container my-4">
                 <div className="d-flex justify-content-between align-items-center mb-4">

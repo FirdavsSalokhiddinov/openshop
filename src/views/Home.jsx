@@ -1,9 +1,6 @@
 import '../App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Container, Row, Col, Button, Carousel, Image } from 'react-bootstrap';
-import carousel1 from '../assets/Carousel1.svg';
-import carousel2 from '../assets/Carousel2.svg';
-import carousel3 from '../assets/Carousel3.svg';
 import product1 from '../assets/product-1.png';
 import product2 from '../assets/product-2.png';
 import product3 from '../assets/product-3.png';
@@ -21,37 +18,15 @@ import top2 from '../assets/top/top2.png';
 import top3 from '../assets/top/top3.png';
 import top4 from '../assets/top/top4.png';
 import ps from '../assets/playstationimg.svg';
-import NavigationBar from '../views/NavigationBar';
-
+import NavigationBar from './NavigationBar';
+import MyCarousel from './Carousel';
 
 const HomePage = () => {
     return (
         <div className="Home">
             <NavigationBar />
-
-            <Carousel data-bs-theme="dark">
-                <Carousel.Item>
-                <img className="d-block w-100" src={carousel1} alt="First slide"/>
-                <Carousel.Caption>
-                    <h5>First slide label</h5>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                <img className="d-block w-100" src={carousel2} alt="Second slide"/>
-                <Carousel.Caption>
-                    <h5>Second slide label</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                <img className="d-block w-100" src={carousel3} alt="Third slide"/>
-                <Carousel.Caption>
-                    <h5>Third slide label</h5>
-                    <p> Praesent commodo cursus magna, vel scelerisque nisl consectetur </p>
-                </Carousel.Caption>
-                </Carousel.Item>
-            </Carousel>
+            <MyCarousel />
+            
             
             <Container className="new-product my-4">
                 <Row>
