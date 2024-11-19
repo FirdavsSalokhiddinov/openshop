@@ -27,7 +27,6 @@ const HomePage = () => {
             <NavigationBar />
             <MyCarousel />
             
-            
             <Container className="new-product my-4">
                 <Row>
                 {/* Large Product on the Left */}
