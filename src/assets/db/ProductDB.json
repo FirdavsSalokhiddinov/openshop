@@ -1,3 +1,4 @@
+
 {
     "carousel": [
       {"id": "1", "name":"phone-image", "srcImage":"phoneCarousel.svg"},
@@ -20,9 +21,15 @@
       { "id": "1", "name": "Xiaomi", "category_id": "1" },
       { "id": "2", "name": "Apple", "category_id": "1" },
       { "id": "3", "name": "Samsung", "category_id": "1" },
-      { "id": "4", "name": "Lenovo", "category_id": "4" },
-      { "id": "5", "name": "HP", "category_id": "4" },
-      { "id": "6", "name": "Apple", "category_id": "4" }
+      { "id": "4", "name": "Apple", "category_id": "2" },
+      { "id": "5", "name": "Samsung", "category_id": "2" },
+      { "id": "6", "name": "Xiaomi", "category_id": "2" },
+      { "id": "7", "name": "Apple", "category_id": "3" },
+      { "id": "8", "name": "Dell", "category_id": "3" },
+      { "id": "9", "name": "HP", "category_id": "3" },
+      { "id": "10", "name": "Lenovo", "category_id": "4" },
+      { "id": "11", "name": "HP", "category_id": "4" },
+      { "id": "12", "name": "Apple", "category_id": "4" }
     ],
     "products": [
       {
@@ -33,7 +40,7 @@
         "category_id": "1",
         "price": 1300,
         "stock": 150,
-        "imageSrc": "iphone/iphone1.png"
+        "imageSrc": "products/Phone/Apple/iphone1.png"
       },
       {
         "id": "2",
@@ -43,7 +50,7 @@
         "category_id": "1",
         "price": 700,
         "stock": 150,
-        "imageSrc": "iphone/iphone2.png"
+        "imageSrc": "products/Phone/Apple/iphone2.png"
       },
       {
         "id": "3",
@@ -53,7 +60,7 @@
         "category_id": "1",
         "price": 1500,
         "stock": 150,
-        "imageSrc": "iphone/iphone3.png"
+        "imageSrc": "products/Phone/Apple/iphone3.png"
       },
       {
         "id": "4",
@@ -63,7 +70,7 @@
         "category_id": "1",
         "price": 850,
         "stock": 150,
-        "imageSrc": "iphone/iphone4.png"
+        "imageSrc": "products/Phone/Apple/iphone4.png"
       },
       {
         "id": "5",
@@ -73,7 +80,7 @@
         "category_id": "1",
         "price": 231,
         "stock": 150,
-        "imageSrc": "samsung/phone1.png"
+        "imageSrc": "products/Phone/Samsung/phone1.png"
       },
       {
         "id": "6",
@@ -83,7 +90,7 @@
         "category_id": "1",
         "price": 250,
         "stock": 150,
-        "imageSrc": "samsung/phone2.png"
+        "imageSrc": "products/Phone/Samsung/phone2.png"
       },
       {
         "id": "7",
@@ -93,7 +100,7 @@
         "category_id": "1",
         "price": 535,
         "stock": 150,
-        "imageSrc": "samsung/phone3.png"
+        "imageSrc": "products/Phone/Samsung/phone3.png"
       },
       {
         "id": "8",
@@ -103,7 +110,7 @@
         "category_id": "1",
         "price": 237,
         "stock": 150,
-        "imageSrc": "samsung/phone4.png"
+        "imageSrc": "products/Phone/Samsung/phone4.png"
       },
       {
         "id": "9",
@@ -113,7 +120,7 @@
         "category_id": "1",
         "price": 730,
         "stock": 150,
-        "imageSrc": "xiaomi/phone1.png"
+        "imageSrc": "products/Phone/Xiaomi/phone1.png"
       },
       {
         "id": "10",
@@ -123,7 +130,7 @@
         "category_id": "1",
         "price": 727,
         "stock": 150,
-        "imageSrc": "xiaomi/phone2.png"
+        "imageSrc": "products/Phone/Xiaomi/phone2.png"
       },
       {
         "id": "11",
@@ -133,7 +140,7 @@
         "category_id": "1",
         "price": 337,
         "stock": 150,
-        "imageSrc": "xiaomi/phone3.png"
+        "imageSrc": "products/Phone/Xiaomi/phone3.png"
       },
       {
         "id": "12",
@@ -143,7 +150,367 @@
         "category_id": "1",
         "price": 325,
         "stock": 150,
-        "imageSrc": "xiaomi/phone4.png"
+        "imageSrc": "products/Phone/Xiaomi/phone4.png"
+      },
+      {
+        "id": "13",
+        "name": "MacBook Air 13 inch",
+        "description": "lorem ipsum...",
+        "manufacturer_id": "12",
+        "category_id": "4",
+        "price": 999,
+        "stock": 150,
+        "imageSrc": "products/Laptop/Apple/MacbookAir/Midnight.svg"
+      },
+      {
+        "id": "14",
+        "name": "MacBook Air 15 inch",
+        "description": "lorem ipsum...",
+        "manufacturer_id": "12",
+        "category_id": "4",
+        "price": 1299,
+        "stock": 150,
+        "imageSrc": "products/Laptop/Apple/MacbookAir/SpaceGray.svg"
+      },
+      {
+        "id": "15",
+        "name": "MacBook Pro 14 inch",
+        "description": "lorem ipsum...",
+        "manufacturer_id": "12",
+        "category_id": "4",
+        "price": 1599,
+        "stock": 150,
+        "imageSrc": "products/Laptop/Apple/MacbookPro/SpaceBlack.svg"
+      },
+      {
+        "id": "16",
+        "name": "MacBook Pro 16 inch",
+        "description": "lorem ipsum...",
+        "manufacturer_id": "12",
+        "category_id": "4",
+        "price": 2499,
+        "stock": 150,
+        "imageSrc": "products/Laptop/Apple/MacbookPro/Silver.svg"
+      },
+      {
+        "id": "17",
+        "name": "HP Elitebook",
+        "description": "lorem ipsum...",
+        "manufacturer_id": "11",
+        "category_id": "4",
+        "price": 2499,
+        "stock": 150,
+        "imageSrc": "products/Laptop/HP/EliteBook/front.svg"
+      },
+      {
+        "id": "18",
+        "name": "HP Envy",
+        "description": "lorem ipsum...",
+        "manufacturer_id": "11",
+        "category_id": "4",
+        "price": 2499,
+        "stock": 150,
+        "imageSrc": "products/Laptop/HP/Envy/front.svg"
+      },
+      {
+        "id": "19",
+        "name": "HP Pavilion",
+        "description": "lorem ipsum...",
+        "manufacturer_id": "11",
+        "category_id": "4",
+        "price": 2499,
+        "stock": 150,
+        "imageSrc": "products/Laptop/HP/Pavilion/front.svg"
+      },
+      {
+        "id": "20",
+        "name": "HP ProBook",
+        "description": "lorem ipsum...",
+        "manufacturer_id": "11",
+        "category_id": "4",
+        "price": 2499,
+        "stock": 150,
+        "imageSrc": "products/Laptop/HP/ProBook/front.svg"
+      },
+      {
+        "id": "21",
+        "name": "Lenovo Legion",
+        "description": "lorem ipsum...",
+        "manufacturer_id": "10",
+        "category_id": "4",
+        "price": 2499,
+        "stock": 150,
+        "imageSrc": "products/Laptop/Lenovo/Legion/front.svg"
+      },
+      {
+        "id": "22",
+        "name": "Lenovo ChromeBook",
+        "description": "lorem ipsum...",
+        "manufacturer_id": "10",
+        "category_id": "4",
+        "price": 2499,
+        "stock": 150,
+        "imageSrc": "products/Laptop/Lenovo/ChromeBook/front.svg"
+      },
+      {
+        "id": "23",
+        "name": "Lenovo Ideapad",
+        "description": "lorem ipsum...",
+        "manufacturer_id": "10",
+        "category_id": "4",
+        "price": 2499,
+        "stock": 150,
+        "imageSrc": "products/Laptop/Lenovo/Ideapad/front.svg"
+      },
+      {
+        "id": "24",
+        "name": "Lenovo Thinkpad",
+        "description": "lorem ipsum...",
+        "manufacturer_id": "10",
+        "category_id": "4",
+        "price": 2499,
+        "stock": 150,
+        "imageSrc": "products/Laptop/Lenovo/Thinkpad/front.svg"
+      },
+      {
+        "id": "25",
+        "name": "iMac (blue)",
+        "description": "lorem ipsum...",
+        "manufacturer_id": "7",
+        "category_id": "3",
+        "price": 2499,
+        "stock": 150,
+        "imageSrc": "products/Computer/Apple/blue.jpg"
+      },
+      {
+        "id": "26",
+        "name": "iMac (orange)",
+        "description": "lorem ipsum...",
+        "manufacturer_id": "7",
+        "category_id": "3",
+        "price": 2499,
+        "stock": 150,
+        "imageSrc": "products/Computer/Apple/orange.jpg"
+      },
+      {
+        "id": "27",
+        "name": "iMac (pink)",
+        "description": "lorem ipsum...",
+        "manufacturer_id": "7",
+        "category_id": "3",
+        "price": 2499,
+        "stock": 150,
+        "imageSrc": "products/Computer/Apple/pink.jpg"
+      },
+      {
+        "id": "28",
+        "name": "iMac (purple)",
+        "description": "lorem ipsum...",
+        "manufacturer_id": "7",
+        "category_id": "3",
+        "price": 2499,
+        "stock": 150,
+        "imageSrc": "products/Computer/Apple/purple.jpg"
+      },
+      {
+        "id": "29",
+        "name": "Dell PC",
+        "description": "lorem ipsum...",
+        "manufacturer_id": "8",
+        "category_id": "3",
+        "price": 2499,
+        "stock": 150,
+        "imageSrc": "products/Computer/Dell/1/front.jpg"
+      },
+      {
+        "id": "30",
+        "name": "Dell PC",
+        "description": "lorem ipsum...",
+        "manufacturer_id": "8",
+        "category_id": "3",
+        "price": 2499,
+        "stock": 150,
+        "imageSrc": "products/Computer/Dell/2/frontinfo.jpg"
+      },
+      {
+        "id": "31",
+        "name": "Dell PC",
+        "description": "lorem ipsum...",
+        "manufacturer_id": "8",
+        "category_id": "3",
+        "price": 2499,
+        "stock": 150,
+        "imageSrc": "products/Computer/Dell/3/full.jpg"
+      },
+      {
+        "id": "32",
+        "name": "Dell PC",
+        "description": "lorem ipsum...",
+        "manufacturer_id": "8",
+        "category_id": "3",
+        "price": 2499,
+        "stock": 150,
+        "imageSrc": "products/Computer/Dell/4/full.jpg"
+      },
+      {
+        "id": "33",
+        "name": "HP PC",
+        "description": "lorem ipsum...",
+        "manufacturer_id": "9",
+        "category_id": "3",
+        "price": 2499,
+        "stock": 150,
+        "imageSrc": "products/Computer/HP/1/full.jpg"
+      },
+      {
+        "id": "34",
+        "name": "HP PC",
+        "description": "lorem ipsum...",
+        "manufacturer_id": "9",
+        "category_id": "3",
+        "price": 2499,
+        "stock": 150,
+        "imageSrc": "products/Computer/HP/2/pc.jpg"
+      },
+      {
+        "id": "35",
+        "name": "HP PC",
+        "description": "lorem ipsum...",
+        "manufacturer_id": "9",
+        "category_id": "3",
+        "price": 2499,
+        "stock": 150,
+        "imageSrc": "products/Computer/HP/3/full.jpg"
+      },
+      {
+        "id": "36",
+        "name": "HP PC",
+        "description": "lorem ipsum...",
+        "manufacturer_id": "9",
+        "category_id": "3",
+        "price": 2499,
+        "stock": 150,
+        "imageSrc": "products/Computer/HP/4/front.jpg"
+      },
+      {
+        "id": "37",
+        "name": "iPad Pro",
+        "description": "lorem ipsum...",
+        "manufacturer_id": "4",
+        "category_id": "2",
+        "price": 2499,
+        "stock": 150,
+        "imageSrc": "products/Tablet/Apple/iPadPro/front.webp"
+      },
+      {
+        "id": "38",
+        "name": "iPad",
+        "description": "lorem ipsum...",
+        "manufacturer_id": "4",
+        "category_id": "2",
+        "price": 2499,
+        "stock": 150,
+        "imageSrc": "products/Tablet/Apple/iPad/front.webp"
+      },
+      {
+        "id": "39",
+        "name": "iPad Air",
+        "description": "lorem ipsum...",
+        "manufacturer_id": "4",
+        "category_id": "2",
+        "price": 2499,
+        "stock": 150,
+        "imageSrc": "products/Tablet/Apple/iPadAir/front.webp"
+      },
+      {
+        "id": "40",
+        "name": "iPad Mini",
+        "description": "lorem ipsum...",
+        "manufacturer_id": "4",
+        "category_id": "2",
+        "price": 2499,
+        "stock": 150,
+        "imageSrc": "products/Tablet/Apple/iPadMini/front.webp"
+      },
+      {
+        "id": "41",
+        "name": "Galaxy Tab S10",
+        "description": "lorem ipsum...",
+        "manufacturer_id": "5",
+        "category_id": "2",
+        "price": 2499,
+        "stock": 150,
+        "imageSrc": "products/Tablet/Samsung/GalaxyTabS10/moonstoneGray.webp"
+      },
+      {
+        "id": "42",
+        "name": "Galaxy Tab S9",
+        "description": "lorem ipsum...",
+        "manufacturer_id": "5",
+        "category_id": "2",
+        "price": 2499,
+        "stock": 150,
+        "imageSrc": "products/Tablet/Samsung/GalaxyTabS9/Beige.webp"
+      },
+      {
+        "id": "43",
+        "name": "Galaxy Tab S9 FE",
+        "description": "lorem ipsum...",
+        "manufacturer_id": "5",
+        "category_id": "2",
+        "price": 2499,
+        "stock": 150,
+        "imageSrc": "products/Tablet/Samsung/GalaxyTabS9FE/Mint.webp"
+      },
+      {
+        "id": "44",
+        "name": "Galaxy Tab A9+",
+        "description": "lorem ipsum...",
+        "manufacturer_id": "5",
+        "category_id": "2",
+        "price": 2499,
+        "stock": 150,
+        "imageSrc": "products/Tablet/Samsung/GalaxyTabA9+/Navy.webp"
+      },
+      {
+        "id": "45",
+        "name": "Xiaomi Pad 6S Pro",
+        "description": "lorem ipsum...",
+        "manufacturer_id": "6",
+        "category_id": "2",
+        "price": 2499,
+        "stock": 150,
+        "imageSrc": "products/Tablet/Xiaomi/XiaomiPad6SPro.webp"
+      },
+      {
+        "id": "46",
+        "name": "Xiaomi Pad 6",
+        "description": "lorem ipsum...",
+        "manufacturer_id": "6",
+        "category_id": "2",
+        "price": 2499,
+        "stock": 150,
+        "imageSrc": "products/Tablet/Xiaomi/XiaomiPad6.webp"
+      },
+      {
+        "id": "47",
+        "name": "Redmi Pad SE 8.7",
+        "description": "lorem ipsum...",
+        "manufacturer_id": "6",
+        "category_id": "2",
+        "price": 2499,
+        "stock": 150,
+        "imageSrc": "products/Tablet/Xiaomi/RedmiPadSE87.webp"
+      },
+      {
+        "id": "48",
+        "name": "Redmi Pad Pro 5G",
+        "description": "lorem ipsum...",
+        "manufacturer_id": "6",
+        "category_id": "2",
+        "price": 2499,
+        "stock": 150,
+        "imageSrc": "products/Tablet/Xiaomi/RedmiPadPro5G.webp"
       }
     ]
   }

@@ -35,7 +35,7 @@ const ProductCategoryPage = () => {
                             <Col md={3} className='mb-4 text-center' key={'column-' + product.product_id}>
                                 <article className="goods-card">
                                     <div className="goods-card__img">
-                                        <img src={require("../assets/" + product.imageSrc)} alt={product.name} />
+                                        <img src={require("../assets/" + product.imageSrc)} alt={product.name}  style={{maxWidth: "225px", minHeight: "200px", maxHeight:"200px"}}/>
                                     </div>
                                     <div className="goods-card__content">
                                         <h4 style={{ fontSize: '1rem', color: '#555' }}>{product.name}</h4>
@@ -68,7 +68,7 @@ const ProductCategoryPage = () => {
                             <Col md={3} className='mb-4 text-center' key={'column-' + product.product_id}>
                                 <article className="goods-card">
                                     <div className="goods-card__img">
-                                        <img src={require("../assets/" + product.imageSrc)} alt={product.name} />
+                                        <img src={require("../assets/" + product.imageSrc)} alt={product.name}   style={{maxWidth: "225px", minHeight: "200px", maxHeight:"200px"}}/>
                                     </div>
                                     <div className="goods-card__content">
                                         <h4 style={{ fontSize: '1rem', color: '#555' }}>{product.name}</h4>
@@ -96,7 +96,7 @@ const ProductCategoryPage = () => {
                             <Col md={3} className='mb-4 text-center' key={'column-' + product.product_id}>
                                 <article className="goods-card">
                                     <div className="goods-card__img">
-                                        <img src={require("../assets/" + product.imageSrc)} alt={product.name} />
+                                        <img src={require("../assets/" + product.imageSrc)} alt={product.name}   style={{maxWidth: "225px", minHeight: "200px", maxHeight:"200px"}}/>
                                     </div>
                                     <div className="goods-card__content">
                                         <h4 style={{ fontSize: '1rem', color: '#555' }}>{product.name}</h4>
