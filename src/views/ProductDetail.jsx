@@ -1,148 +1,81 @@
 import '../App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Nav, NavDropdown, Row, Col, Button, DropdownDivider, Image, Container, Tab} from 'react-bootstrap';
-import * as Icon from 'react-bootstrap-icons';
-import phone1 from '../assets/single-tabs/tab1.svg';
-import phone2 from '../assets/single-tabs/tab2.png';
-import phone3 from '../assets/single-tabs/tab3.png';
+import {Nav, Row, Col, Button, Image, Container, Tab} from 'react-bootstrap';
 import vr from '../assets/others/vr.svg';
+import NavigationBar from './NavigationBar';
+import db from '../assets/db/ProductDB.json';
+import { useParams } from 'react-router-dom';
+import { useState } from 'react';
 
 const ProductDetailPage = () => {
+    const { productId } = useParams();
+    const [selectedImage, setSelectedImage] = useState(0);
+
     return (
         <div className='ProductDetailPage'>
-            
-            <Nav className='justify-content-center'>
-                <div className='d-flex align-items-center'>
-                <NavDropdown id="nav-dropdown-dark-example" title="Cell Phones & Tablets">
-                    <div className="d-flex justify-content-between navdropdown" id="navdropdown" style={{ width: '100%' }}>
-                    <div>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>Cell Phones</NavDropdown.Item>
-                        <DropdownDivider/>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>Xiaomi</NavDropdown.Item>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>Apple</NavDropdown.Item>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>Samsung</NavDropdown.Item>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>Huawei</NavDropdown.Item>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>BQ</NavDropdown.Item>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>Nokia</NavDropdown.Item>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>Inoi</NavDropdown.Item>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>Vivo</NavDropdown.Item>
-                    </div>
-                    <div className="ms-auto"> {/* 'ms-auto' pushes this div to the right */}
-                        <NavDropdown.Item href="/productcategory" style={{textDecoration:'none', color:'#333'}}>Action</NavDropdown.Item>
-                        <DropdownDivider/>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>Xiami</NavDropdown.Item>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>Apple</NavDropdown.Item>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>Samsung</NavDropdown.Item>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>Huawei</NavDropdown.Item>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>BQ</NavDropdown.Item>
-                        <NavDropdown.Item href="/productcategory"  style={{textDecoration:'none', color:'#333'}}>More...</NavDropdown.Item>
-                    </div>
-                    </div>
-                </NavDropdown>
 
-                <NavDropdown id="nav-dropdown-dark-example" title="Computers & Laptop">
-                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                </NavDropdown>
-                <NavDropdown id="nav-dropdown-dark-example" title="TV & Video">
-                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                </NavDropdown>
-                <NavDropdown id="nav-dropdown-dark-example" title="Accessories">
-                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                </NavDropdown>
-                <NavDropdown id="nav-dropdown-dark-example" title="Home Appliance">
-                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                </NavDropdown>
-                <NavDropdown id="nav-dropdown-dark-example" title="Video Games & Consoles">
-                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                </NavDropdown>
-                </div>
-            </Nav>
+            <NavigationBar />
 
             <Container>
+            {db.products
+            .filter((x) => x.id === productId)
+            .map((product) => (
                 <Row className="mt-5">
                     <Col md={6}>
                         <Tab.Container id="left-tabs-example" defaultActiveKey="first">
-                            <Row>
+                           
+                                <Row key={'column-' + product.id}>
                                 <Col sm={3}>
                                     <Nav className="flex-column">
-                                        <Nav.Item>
-                                            <Nav.Link eventKey="first">
-                                                <img src={phone1} alt="" style={{ 
+                                    {product.RelatedImagesSrc.map((imagePath, index) => (
+                                        <Nav.Item key={`nav-item-${index}`}>
+                                        <Nav.Link>
+                                            <img
+                                            src={require(`../assets/${imagePath}`)}
+                                            alt={`Related Product ${index + 1}`}
+                                            style={{
                                                 width: '115px',
-                                                padding: '5px 7.5px 5px 7.5px'
-                                                    }} className="productdetailimg"/>
-                                            </Nav.Link>
+                                                padding: '5px 7.5px 5px 7.5px',
+                                            }}
+                                            onClick={() => setSelectedImage(index)}
+                                            className="productdetailimg"
+                                            />
+                                        </Nav.Link>
                                         </Nav.Item>
-                                        <Nav.Item>
-                                            <Nav.Link eventKey="second">
-                                                <img src={phone2} alt="" style={{ 
-                                                width: '115px',
-                                                padding: '5px 7.5px 5px 7.5px'
-                                                    }} className="productdetailimg"/>
-                                            </Nav.Link>
-                                        </Nav.Item>
-                                        <Nav.Item>
-                                            <Nav.Link eventKey="third">
-                                                <img src={phone3} alt="" style={{ 
-                                                width: '115px',
-                                                padding: '5px 7.5px 5px 7.5px'
-                                                    }} className="productdetailimg"/>
-                                            </Nav.Link>
-                                        </Nav.Item>
+                                    ))}
                                     </Nav>
                                 </Col>
+
                                 <Col sm={9}>
-                                    <Tab.Content>
-                                        <Tab.Pane eventKey="first">
-                                            <img src={phone1} alt="" style={{ 
-                                                width: '400px',
-                                                padding: '5px 7.5px 5px 7.5px'
-                                                    }}/>
-                                        </Tab.Pane>
-                                        <Tab.Pane eventKey="second">
-                                            <img src={phone2} alt="" style={{ 
-                                                width: '400px',
-                                                padding: '5px 7.5px 5px 7.5px'
-                                                    }}/>
-                                        </Tab.Pane>
-                                        <Tab.Pane eventKey="third">
-                                            <img src={phone3} alt="" style={{ 
-                                                width: '400px',
-                                                padding: '5px 7.5px 5px 7.5px'
-                                                    }}/>
-                                        </Tab.Pane>
-                                    </Tab.Content>
+                                    <div>
+                                    <img
+                                        src={require(`../assets/${product.RelatedImagesSrc[selectedImage]}`)}
+                                        alt={`Selected Product`}
+                                        style={{
+                                        width: '400px',
+                                        padding: '5px 7.5px 5px 7.5px',
+                                        }}
+                                        className="productdetailimg"
+                                    />
+                                    </div>
                                 </Col>
-                            </Row>
+                                </Row>
+                            
                         </Tab.Container>
                     </Col>
+
                     <Col md={6}>
-                        <h1>Apple iPhone 12 Pro Max 128GB (Gray)</h1>
-                        <h2>1300$</h2>
+                        <h1>{product.name}</h1>
+                        <h2>{product.price}$</h2>
                         <h3>Product Highlights</h3>
                         <ul>
-                            <li>128 GB ROM</li>
-                            <li>13.72 cm (5.4 inch) Super Retina XDR Display</li>
-                            <li>12MP + 12MP | 12MP Front Camera</li>
-                            <li>A14 Bionic Chip with Next Generation Neural Engine Processor</li>
-                            <li>Ceramic Shield</li>
-                            <li>IP68 Water Resistance</li>
-                            <li>All Screen OLED Display</li>
-                            <li>The shipment for this product will begin from 14th November 2020</li>
+                            {product.Highlights.map((highlight, index) => (
+                                <li>{highlight}</li>
+                            ))}
                         </ul>
                         <div className="d-flex mt-3">
                             <Button variant="dark" size="lg" href="/cart" style={{width: "175px"}}>
-                                <span>🛒 CART</span>
+                                <span>🛒 ADD CART</span>
                             </Button>
                             <Button variant="dark" size="lg" href="/cart" className="ms-3" style={{width: "175px"}}>
                             BUY NOW
@@ -150,6 +83,7 @@ const ProductDetailPage = () => {
                         </div>
                     </Col>
                 </Row>
+            ))}
             </Container>
 
             <Container style={{margin: '100px auto auto auto'}}>

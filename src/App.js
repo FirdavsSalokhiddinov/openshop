@@ -73,7 +73,7 @@ function App() {
             <Route path="/cart" element={<Cart/>} />
             <Route path="/emptycart" element={<EmptyCart/>} />
             <Route path="/productcategory/:categoryId/:manufacturerId" element={<ProductCategoryPage/>} />
-            <Route path="/productdetail" element={<ProductDetailPage/>} />{/* /product/:id    / /category/:id/product/:id*/}
+            <Route path="/productdetail/:productId" element={<ProductDetailPage/>} />{/* /product/:id    / /category/:id/product/:id*/}
             <Route path="/checkout" element={<CheckoutPage/>} />
             <Route path="/orderconfirmation" element={<OrderConfirmationPage/>} />
           </Routes>

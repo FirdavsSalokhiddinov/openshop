@@ -40,7 +40,9 @@
         "category_id": "1",
         "price": 1300,
         "stock": 150,
-        "imageSrc": "products/Phone/Apple/iphone1.png"
+        "imageSrc": "products/Phone/Apple/iphone1.png",
+        "RelatedImagesSrc": ["products/Phone/Apple/iphone1.png", "products/Phone/Apple/iphone4.png", "products/Phone/Apple/iphone2.png", "products/Phone/Apple/iphone3.png"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "2",
@@ -50,7 +52,9 @@
         "category_id": "1",
         "price": 700,
         "stock": 150,
-        "imageSrc": "products/Phone/Apple/iphone2.png"
+        "imageSrc": "products/Phone/Apple/iphone2.png",
+        "RelatedImagesSrc": ["products/Phone/Apple/iphone2.png", "products/Phone/Apple/iphone1.png", "products/Phone/Apple/iphone4.png", "products/Phone/Apple/iphone3.png"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "3",
@@ -60,7 +64,9 @@
         "category_id": "1",
         "price": 1500,
         "stock": 150,
-        "imageSrc": "products/Phone/Apple/iphone3.png"
+        "imageSrc": "products/Phone/Apple/iphone3.png",
+        "RelatedImagesSrc": ["products/Phone/Apple/iphone3.png", "products/Phone/Apple/iphone1.png", "products/Phone/Apple/iphone2.png", "products/Phone/Apple/iphone4.png"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "4",
@@ -70,7 +76,9 @@
         "category_id": "1",
         "price": 850,
         "stock": 150,
-        "imageSrc": "products/Phone/Apple/iphone4.png"
+        "imageSrc": "products/Phone/Apple/iphone4.png",
+        "RelatedImagesSrc": ["products/Phone/Apple/iphone4.png", "products/Phone/Apple/iphone1.png", "products/Phone/Apple/iphone2.png", "products/Phone/Apple/iphone3.png"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "5",
@@ -80,7 +88,9 @@
         "category_id": "1",
         "price": 231,
         "stock": 150,
-        "imageSrc": "products/Phone/Samsung/phone1.png"
+        "imageSrc": "products/Phone/Samsung/phone1.png",
+        "RelatedImagesSrc": ["products/Phone/Samsung/phone1.png", "products/Phone/Samsung/phone4.png", "products/Phone/Samsung/phone2.png", "products/Phone/Samsung/phone3.png"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "6",
@@ -90,7 +100,9 @@
         "category_id": "1",
         "price": 250,
         "stock": 150,
-        "imageSrc": "products/Phone/Samsung/phone2.png"
+        "imageSrc": "products/Phone/Samsung/phone2.png",
+        "RelatedImagesSrc": ["products/Phone/Samsung/phone2.png", "products/Phone/Samsung/phone1.png", "products/Phone/Samsung/phone4.png", "products/Phone/Samsung/phone3.png"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "7",
@@ -100,7 +112,9 @@
         "category_id": "1",
         "price": 535,
         "stock": 150,
-        "imageSrc": "products/Phone/Samsung/phone3.png"
+        "imageSrc": "products/Phone/Samsung/phone3.png",
+        "RelatedImagesSrc": ["products/Phone/Samsung/phone3.png", "products/Phone/Samsung/phone1.png", "products/Phone/Samsung/phone2.png", "products/Phone/Samsung/phone4.png"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "8",
@@ -110,7 +124,9 @@
         "category_id": "1",
         "price": 237,
         "stock": 150,
-        "imageSrc": "products/Phone/Samsung/phone4.png"
+        "imageSrc": "products/Phone/Samsung/phone4.png",
+        "RelatedImagesSrc": ["products/Phone/Samsung/phone4.png", "products/Phone/Samsung/phone1.png", "products/Phone/Samsung/phone2.png", "products/Phone/Samsung/phone3.png"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "9",
@@ -120,7 +136,9 @@
         "category_id": "1",
         "price": 730,
         "stock": 150,
-        "imageSrc": "products/Phone/Xiaomi/phone1.png"
+        "imageSrc": "products/Phone/Xiaomi/phone1.png",
+        "RelatedImagesSrc": ["products/Phone/Xiaomi/phone1.png", "products/Phone/Xiaomi/phone4.png", "products/Phone/Xiaomi/phone2.png", "products/Phone/Xiaomi/phone3.png"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "10",
@@ -130,7 +148,9 @@
         "category_id": "1",
         "price": 727,
         "stock": 150,
-        "imageSrc": "products/Phone/Xiaomi/phone2.png"
+        "imageSrc": "products/Phone/Xiaomi/phone2.png",
+        "RelatedImagesSrc": ["products/Phone/Xiaomi/phone2.png", "products/Phone/Xiaomi/phone1.png", "products/Phone/Xiaomi/phone4.png", "products/Phone/Xiaomi/phone3.png"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "11",
@@ -140,7 +160,9 @@
         "category_id": "1",
         "price": 337,
         "stock": 150,
-        "imageSrc": "products/Phone/Xiaomi/phone3.png"
+        "imageSrc": "products/Phone/Xiaomi/phone3.png",
+        "RelatedImagesSrc": ["products/Phone/Xiaomi/phone3.png", "products/Phone/Xiaomi/phone1.png", "products/Phone/Xiaomi/phone2.png", "products/Phone/Xiaomi/phone4.png"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "12",
@@ -150,7 +172,9 @@
         "category_id": "1",
         "price": 325,
         "stock": 150,
-        "imageSrc": "products/Phone/Xiaomi/phone4.png"
+        "imageSrc": "products/Phone/Xiaomi/phone4.png",
+        "RelatedImagesSrc": ["products/Phone/Xiaomi/phone4.png", "products/Phone/Xiaomi/phone1.png", "products/Phone/Xiaomi/phone2.png", "products/Phone/Xiaomi/phone3.png"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "13",
@@ -160,7 +184,9 @@
         "category_id": "4",
         "price": 999,
         "stock": 150,
-        "imageSrc": "products/Laptop/Apple/MacbookAir/Midnight.svg"
+        "imageSrc": "products/Laptop/Apple/MacbookAir/Midnight.svg",
+        "RelatedImagesSrc": ["products/Laptop/Apple/MacbookAir/Midnight.svg", "products/Laptop/Apple/MacbookAir/Silver.svg", "products/Laptop/Apple/MacbookAir/SpaceGray.svg", "products/Laptop/Apple/MacbookAir/Starlight.svg"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "14",
@@ -170,7 +196,9 @@
         "category_id": "4",
         "price": 1299,
         "stock": 150,
-        "imageSrc": "products/Laptop/Apple/MacbookAir/SpaceGray.svg"
+        "imageSrc": "products/Laptop/Apple/MacbookAir/SpaceGray.svg",
+        "RelatedImagesSrc": ["products/Laptop/Apple/MacbookAir/SpaceGray.svg", "products/Laptop/Apple/MacbookAir/Silver.svg", "products/Laptop/Apple/MacbookAir/Midnight.svg", "products/Laptop/Apple/MacbookAir/Starlight.svg"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "15",
@@ -180,7 +208,9 @@
         "category_id": "4",
         "price": 1599,
         "stock": 150,
-        "imageSrc": "products/Laptop/Apple/MacbookPro/SpaceBlack.svg"
+        "imageSrc": "products/Laptop/Apple/MacbookPro/SpaceBlack.svg",
+        "RelatedImagesSrc": ["products/Laptop/Apple/MacbookPro/SpaceBlack.svg", "products/Laptop/Apple/MacbookPro/Silver.svg"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "16",
@@ -190,7 +220,9 @@
         "category_id": "4",
         "price": 2499,
         "stock": 150,
-        "imageSrc": "products/Laptop/Apple/MacbookPro/Silver.svg"
+        "imageSrc": "products/Laptop/Apple/MacbookPro/Silver.svg",
+        "RelatedImagesSrc": ["products/Laptop/Apple/MacbookPro/Silver.svg", "products/Laptop/Apple/MacbookPro/SpaceBlack.svg"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "17",
@@ -200,7 +232,9 @@
         "category_id": "4",
         "price": 2499,
         "stock": 150,
-        "imageSrc": "products/Laptop/HP/EliteBook/front.svg"
+        "imageSrc": "products/Laptop/HP/EliteBook/front.svg",
+        "RelatedImagesSrc": ["products/Laptop/HP/EliteBook/front.svg", "products/Laptop/HP/EliteBook/back.svg", "products/Laptop/HP/EliteBook/side.svg"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "18",
@@ -210,7 +244,9 @@
         "category_id": "4",
         "price": 2499,
         "stock": 150,
-        "imageSrc": "products/Laptop/HP/Envy/front.svg"
+        "imageSrc": "products/Laptop/HP/Envy/front.svg",
+        "RelatedImagesSrc": ["products/Laptop/HP/Envy/front.svg", "products/Laptop/HP/Envy/360degree.svg", "products/Laptop/HP/Envy/300degree.svg"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "19",
@@ -220,7 +256,9 @@
         "category_id": "4",
         "price": 2499,
         "stock": 150,
-        "imageSrc": "products/Laptop/HP/Pavilion/front.svg"
+        "imageSrc": "products/Laptop/HP/Pavilion/front.svg",
+        "RelatedImagesSrc": ["products/Laptop/HP/Pavilion/front.svg", "products/Laptop/HP/Pavilion/360degree.svg", "products/Laptop/HP/Pavilion/300degree.svg"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "20",
@@ -230,7 +268,9 @@
         "category_id": "4",
         "price": 2499,
         "stock": 150,
-        "imageSrc": "products/Laptop/HP/ProBook/front.svg"
+        "imageSrc": "products/Laptop/HP/ProBook/front.svg",
+        "RelatedImagesSrc": ["products/Laptop/HP/ProBook/front.svg", "products/Laptop/HP/ProBook/back.svg", "products/Laptop/HP/ProBook/side.svg"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "21",
@@ -240,7 +280,9 @@
         "category_id": "4",
         "price": 2499,
         "stock": 150,
-        "imageSrc": "products/Laptop/Lenovo/Legion/front.svg"
+        "imageSrc": "products/Laptop/Lenovo/Legion/front.svg",
+        "RelatedImagesSrc": ["products/Laptop/Lenovo/Legion/front.svg", "products/Laptop/Lenovo/Legion/back.svg", "products/Laptop/Lenovo/Legion/up.svg"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "22",
@@ -250,7 +292,9 @@
         "category_id": "4",
         "price": 2499,
         "stock": 150,
-        "imageSrc": "products/Laptop/Lenovo/ChromeBook/front.svg"
+        "imageSrc": "products/Laptop/Lenovo/ChromeBook/front.svg",
+        "RelatedImagesSrc": ["products/Laptop/Lenovo/ChromeBook/front.svg", "products/Laptop/Lenovo/ChromeBook/side.svg", "products/Laptop/Lenovo/ChromeBook/up.svg"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "23",
@@ -260,7 +304,9 @@
         "category_id": "4",
         "price": 2499,
         "stock": 150,
-        "imageSrc": "products/Laptop/Lenovo/Ideapad/front.svg"
+        "imageSrc": "products/Laptop/Lenovo/Ideapad/front.svg",
+        "RelatedImagesSrc": ["products/Laptop/Lenovo/Ideapad/front.svg", "products/Laptop/Lenovo/Ideapad/side.svg", "products/Laptop/Lenovo/Ideapad/back.svg"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "24",
@@ -270,7 +316,9 @@
         "category_id": "4",
         "price": 2499,
         "stock": 150,
-        "imageSrc": "products/Laptop/Lenovo/Thinkpad/front.svg"
+        "imageSrc": "products/Laptop/Lenovo/Thinkpad/front.svg",
+        "RelatedImagesSrc": ["products/Laptop/Lenovo/Thinkpad/front.svg", "products/Laptop/Lenovo/Thinkpad/side.svg", "products/Laptop/Lenovo/Thinkpad/200degree.svg"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "25",
@@ -280,7 +328,9 @@
         "category_id": "3",
         "price": 2499,
         "stock": 150,
-        "imageSrc": "products/Computer/Apple/blue.jpg"
+        "imageSrc": "products/Computer/Apple/blue.jpg",
+        "RelatedImagesSrc": ["products/Computer/Apple/blue.jpg", "products/Computer/Apple/orange.jpg", "products/Computer/Apple/purple.jpg", "products/Computer/Apple/pink.jpg"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "26",
@@ -290,7 +340,9 @@
         "category_id": "3",
         "price": 2499,
         "stock": 150,
-        "imageSrc": "products/Computer/Apple/orange.jpg"
+        "imageSrc": "products/Computer/Apple/orange.jpg",
+        "RelatedImagesSrc": ["products/Computer/Apple/orange.jpg", "products/Computer/Apple/pink.jpg", "products/Computer/Apple/purple.jpg", "products/Computer/Apple/blue.jpg"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "27",
@@ -300,7 +352,9 @@
         "category_id": "3",
         "price": 2499,
         "stock": 150,
-        "imageSrc": "products/Computer/Apple/pink.jpg"
+        "imageSrc": "products/Computer/Apple/pink.jpg",
+        "RelatedImagesSrc": ["products/Computer/Apple/pink.jpg", "products/Computer/Apple/purple.jpg", "products/Computer/Apple/orange.jpg", "products/Computer/Apple/blue.jpg"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "28",
@@ -310,7 +364,9 @@
         "category_id": "3",
         "price": 2499,
         "stock": 150,
-        "imageSrc": "products/Computer/Apple/purple.jpg"
+        "imageSrc": "products/Computer/Apple/purple.jpg",
+        "RelatedImagesSrc": ["products/Computer/Apple/purple.jpg", "products/Computer/Apple/pink.jpg", "products/Computer/Apple/orange.jpg", "products/Computer/Apple/blue.jpg"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "29",
@@ -320,7 +376,9 @@
         "category_id": "3",
         "price": 2499,
         "stock": 150,
-        "imageSrc": "products/Computer/Dell/1/front.jpg"
+        "imageSrc": "products/Computer/Dell/1/front.jpg",
+        "RelatedImagesSrc": ["products/Computer/Dell/1/front.jpg", "products/Computer/Dell/1/back.jpg"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "30",
@@ -330,7 +388,9 @@
         "category_id": "3",
         "price": 2499,
         "stock": 150,
-        "imageSrc": "products/Computer/Dell/2/frontinfo.jpg"
+        "imageSrc": "products/Computer/Dell/2/front.jpg",
+        "RelatedImagesSrc": ["products/Computer/Dell/2/front.jpg", "products/Computer/Dell/2/frontinfo.jpg", "products/Computer/Dell/2/side.jpg"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "31",
@@ -340,7 +400,9 @@
         "category_id": "3",
         "price": 2499,
         "stock": 150,
-        "imageSrc": "products/Computer/Dell/3/full.jpg"
+        "imageSrc": "products/Computer/Dell/3/full.jpg",
+        "RelatedImagesSrc": ["products/Computer/Dell/3/full.jpg", "products/Computer/Dell/3/monitor.jpg", "products/Computer/Dell/3/pc.jpg"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "32",
@@ -350,7 +412,9 @@
         "category_id": "3",
         "price": 2499,
         "stock": 150,
-        "imageSrc": "products/Computer/Dell/4/full.jpg"
+        "imageSrc": "products/Computer/Dell/4/full.jpg",
+        "RelatedImagesSrc": ["products/Computer/Dell/4/full.jpg", "products/Computer/Dell/4/pc.jpg", "products/Computer/Dell/4/pcKM.jpg"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "33",
@@ -360,7 +424,9 @@
         "category_id": "3",
         "price": 2499,
         "stock": 150,
-        "imageSrc": "products/Computer/HP/1/full.jpg"
+        "imageSrc": "products/Computer/HP/1/full.jpg",
+        "RelatedImagesSrc": ["products/Computer/HP/1/full.jpg", "products/Computer/HP/1/side.jpg", "products/Computer/HP/3/monitor.jpg"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "34",
@@ -370,7 +436,9 @@
         "category_id": "3",
         "price": 2499,
         "stock": 150,
-        "imageSrc": "products/Computer/HP/2/pc.jpg"
+        "imageSrc": "products/Computer/HP/2/pc.jpg",
+        "RelatedImagesSrc": ["products/Computer/HP/2/pc.jpg", "products/Computer/HP/2/pcinfo1.jpg", "products/Computer/HP/3/pcinfo2.jpg"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "35",
@@ -380,7 +448,9 @@
         "category_id": "3",
         "price": 2499,
         "stock": 150,
-        "imageSrc": "products/Computer/HP/3/full.jpg"
+        "imageSrc": "products/Computer/HP/3/full.jpg",
+        "RelatedImagesSrc": ["products/Computer/HP/3/full.jpg", "products/Computer/HP/3/pc.jpg", "products/Computer/HP/3/accessories.jpg"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "36",
@@ -390,7 +460,9 @@
         "category_id": "3",
         "price": 2499,
         "stock": 150,
-        "imageSrc": "products/Computer/HP/4/front.jpg"
+        "imageSrc": "products/Computer/HP/4/front.jpg",
+        "RelatedImagesSrc": ["products/Computer/HP/4/front.jpg", "products/Computer/HP/4/back.jpg", "products/Computer/HP/4/up.jpg"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "37",
@@ -398,9 +470,11 @@
         "description": "lorem ipsum...",
         "manufacturer_id": "4",
         "category_id": "2",
-        "price": 2499,
+        "price": 999,
         "stock": 150,
-        "imageSrc": "products/Tablet/Apple/iPadPro/front.webp"
+        "imageSrc": "products/Tablet/Apple/iPadPro/front.webp",
+        "RelatedImagesSrc": ["products/Tablet/Apple/iPadPro/front.webp", "products/Tablet/Apple/iPadPro/back.webp", "products/Tablet/Apple/iPadPro/side.webp"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "38",
@@ -410,7 +484,9 @@
         "category_id": "2",
         "price": 2499,
         "stock": 150,
-        "imageSrc": "products/Tablet/Apple/iPad/front.webp"
+        "imageSrc": "products/Tablet/Apple/iPad/front.webp",
+        "RelatedImagesSrc": ["products/Tablet/Apple/iPad/front.webp", "products/Tablet/Apple/iPad/back.webp", "products/Tablet/Apple/iPad/side.webp"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "39",
@@ -418,9 +494,11 @@
         "description": "lorem ipsum...",
         "manufacturer_id": "4",
         "category_id": "2",
-        "price": 2499,
+        "price": 599,
         "stock": 150,
-        "imageSrc": "products/Tablet/Apple/iPadAir/front.webp"
+        "imageSrc": "products/Tablet/Apple/iPadAir/front.webp",
+        "RelatedImagesSrc": ["products/Tablet/Apple/iPadAir/front.webp", "products/Tablet/Apple/iPadAir/back.webp", "products/Tablet/Apple/iPadAir/side.webp"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "40",
@@ -428,9 +506,11 @@
         "description": "lorem ipsum...",
         "manufacturer_id": "4",
         "category_id": "2",
-        "price": 2499,
+        "price": 499,
         "stock": 150,
-        "imageSrc": "products/Tablet/Apple/iPadMini/front.webp"
+        "imageSrc": "products/Tablet/Apple/iPadMini/front.webp",
+        "RelatedImagesSrc": ["products/Tablet/Apple/iPadMini/front.webp", "products/Tablet/Apple/iPadMini/back.webp", "products/Tablet/Apple/iPadMini/side.webp"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "41",
@@ -438,9 +518,11 @@
         "description": "lorem ipsum...",
         "manufacturer_id": "5",
         "category_id": "2",
-        "price": 2499,
+        "price": 999.99,
         "stock": 150,
-        "imageSrc": "products/Tablet/Samsung/GalaxyTabS10/moonstoneGray.webp"
+        "imageSrc": "products/Tablet/Samsung/GalaxyTabS10/moonstoneGray.svg",
+        "RelatedImagesSrc": ["products/Tablet/Samsung/GalaxyTabS10/moonstoneGray.svg", "products/Tablet/Samsung/GalaxyTabS10/PlatinumSilver.svg", "products/Tablet/Samsung/GalaxyTabS10/ad.svg"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "42",
@@ -448,9 +530,11 @@
         "description": "lorem ipsum...",
         "manufacturer_id": "5",
         "category_id": "2",
-        "price": 2499,
+        "price": 799.99,
         "stock": 150,
-        "imageSrc": "products/Tablet/Samsung/GalaxyTabS9/Beige.webp"
+        "imageSrc": "products/Tablet/Samsung/GalaxyTabS9/Beige.svg",
+        "RelatedImagesSrc": ["products/Tablet/Samsung/GalaxyTabS9/Beige.svg", "products/Tablet/Samsung/GalaxyTabS9/Graphite.svg", "products/Tablet/Samsung/GalaxyTabS9/Silver.svg"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "43",
@@ -458,9 +542,11 @@
         "description": "lorem ipsum...",
         "manufacturer_id": "5",
         "category_id": "2",
-        "price": 2499,
+        "price": 449.99,
         "stock": 150,
-        "imageSrc": "products/Tablet/Samsung/GalaxyTabS9FE/Mint.webp"
+        "imageSrc": "products/Tablet/Samsung/GalaxyTabS9FE/Mint.svg",
+        "RelatedImagesSrc": ["products/Tablet/Samsung/GalaxyTabS9FE/Mint.svg", "products/Tablet/Samsung/GalaxyTabS9FE/Silver.svg", "products/Tablet/Samsung/GalaxyTabS9FE/Lavender.svg"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "44",
@@ -468,9 +554,11 @@
         "description": "lorem ipsum...",
         "manufacturer_id": "5",
         "category_id": "2",
-        "price": 2499,
+        "price": 219.99,
         "stock": 150,
-        "imageSrc": "products/Tablet/Samsung/GalaxyTabA9+/Navy.webp"
+        "imageSrc": "products/Tablet/Samsung/GalaxyTabA9+/Navy.svg",
+        "RelatedImagesSrc": ["products/Tablet/Samsung/GalaxyTabA9+/Navy.svg", "products/Tablet/Samsung/GalaxyTabA9+/Silver.svg", "products/Tablet/Samsung/GalaxyTabA9+/Graphite.svg"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "45",
@@ -478,19 +566,23 @@
         "description": "lorem ipsum...",
         "manufacturer_id": "6",
         "category_id": "2",
-        "price": 2499,
+        "price": 1300,
         "stock": 150,
-        "imageSrc": "products/Tablet/Xiaomi/XiaomiPad6SPro.webp"
-      },
+        "imageSrc": "products/Tablet/Xiaomi/XiaomiPad6SPro.svg",
+        "RelatedImagesSrc": ["products/Tablet/Xiaomi/XiaomiPad6.svg", "products/Tablet/Xiaomi/XiaomiPad6SPro.svg", "products/Tablet/Xiaomi/RedmiPadSE87.svg", "products/Tablet/Xiaomi/RedmiPadPro5G.svg"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
+        },
       {
         "id": "46",
         "name": "Xiaomi Pad 6",
         "description": "lorem ipsum...",
         "manufacturer_id": "6",
         "category_id": "2",
-        "price": 2499,
+        "price": 1150,
         "stock": 150,
-        "imageSrc": "products/Tablet/Xiaomi/XiaomiPad6.webp"
+        "imageSrc": "products/Tablet/Xiaomi/XiaomiPad6.svg",
+        "RelatedImagesSrc": ["products/Tablet/Xiaomi/XiaomiPad6.svg", "products/Tablet/Xiaomi/XiaomiPad6SPro.svg", "products/Tablet/Xiaomi/RedmiPadSE87.svg", "products/Tablet/Xiaomi/RedmiPadPro5G.svg"],
+        "Highlights": ["128 GB ROM", "13.72 cm (5.4 inch) Super Retina XDR Display", "12MP + 12MP | 12MP Front Camera", "A14 Bionic Chip with Next Generation Neural Engine Processor", "Ceramic Shield", "IP68 Water Resistance", "All Screen OLED Display", "The shipment for this product will begin from 14th November 2020"]
       },
       {
         "id": "47",
@@ -498,9 +590,11 @@
         "description": "lorem ipsum...",
         "manufacturer_id": "6",
         "category_id": "2",
-        "price": 2499,
+        "price": 1000,
         "stock": 150,
-        "imageSrc": "products/Tablet/Xiaomi/RedmiPadSE87.webp"
+        "imageSrc": "products/Tablet/Xiaomi/RedmiPadSE87.svg",
+        "RelatedImagesSrc": ["products/Tablet/Xiaomi/XiaomiPad6.svg", "products/Tablet/Xiaomi/XiaomiPad6SPro.svg", "products/Tablet/Xiaomi/RedmiPadSE87.svg", "products/Tablet/Xiaomi/RedmiPadPro5G.svg"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       },
       {
         "id": "48",
@@ -508,9 +602,11 @@
         "description": "lorem ipsum...",
         "manufacturer_id": "6",
         "category_id": "2",
-        "price": 2499,
+        "price": 800,
         "stock": 150,
-        "imageSrc": "products/Tablet/Xiaomi/RedmiPadPro5G.webp"
+        "imageSrc": "products/Tablet/Xiaomi/RedmiPadPro5G.svg",
+        "RelatedImagesSrc": ["products/Tablet/Xiaomi/XiaomiPad6.svg", "products/Tablet/Xiaomi/XiaomiPad6SPro.svg", "products/Tablet/Xiaomi/RedmiPadSE87.svg", "products/Tablet/Xiaomi/RedmiPadPro5G.svg"],
+        "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
       }
     ]
   }

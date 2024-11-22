@@ -9,14 +9,13 @@ import MyCarousel from './Carousel';
 
 import db from '../assets/db/ProductDB.json';
 import { useParams } from 'react-router-dom';
-import { useEffect, useState } from 'react';
 
 
 const ProductCategoryPage = () => {
 
     const { categoryId, manufacturerId } = useParams();
-    const anotherManufacturer = db.manufacturers.find(x => x.id !== manufacturerId && x.category_id == categoryId);
-    const otherManufacturer = db.manufacturers.find(x => x.id !== manufacturerId && x.id !== anotherManufacturer.id && x.category_id == categoryId );
+    const anotherManufacturer = db.manufacturers.find(x => x.id !== manufacturerId && x.category_id === categoryId);
+    const otherManufacturer = db.manufacturers.find(x => x.id !== manufacturerId && x.id !== anotherManufacturer.id && x.category_id === categoryId );
  
     return (
         <div className='ProductCategoryPage'>
@@ -26,12 +25,12 @@ const ProductCategoryPage = () => {
             <section className="goods container my-4">
                 <div className="d-flex justify-content-between align-items-center mb-4">
                     <h3 className="title text-left mb-0" style={{ fontSize: '1.5rem', color: '#666' }}>
-                        {db.manufacturers.find(x => x.id == manufacturerId).name}
+                        {db.manufacturers.find(x => x.id === manufacturerId).name}
                     </h3>
                 </div>
                 <div className='goods_list'>
                     <Row className='justify-content-center'>
-                        {db.products.filter(x => x.category_id == categoryId && x.manufacturer_id == manufacturerId).map((product, index) => (
+                        {db.products.filter(x => x.category_id === categoryId && x.manufacturer_id === manufacturerId).map((product, index) => (
                             <Col md={3} className='mb-4 text-center' key={'column-' + product.product_id}>
                                 <article className="goods-card">
                                     <div className="goods-card__img">
@@ -42,7 +41,7 @@ const ProductCategoryPage = () => {
                                         <p style={{ fontSize: '0.9rem', color: '#777' }}>{product.price}$</p>
                                     </div>
                                     <a className="goods-card__btn" href="productDetail.html">
-                                        <Button variant="dark" className="w-100" href="/productdetail">Buy</Button>
+                                        <Button variant="dark" className="w-100" href={"/productdetail/" + product.id}>Buy</Button>
                                     </a>
                                 </article>
                             </Col>
@@ -64,7 +63,7 @@ const ProductCategoryPage = () => {
                 </div>
                 <div className='goods_list'>
                     <Row className='justify-content-center'>
-                        {db.products.filter(x => x.category_id == otherManufacturer.category_id && x.manufacturer_id == otherManufacturer.id).map((product, index) => (
+                        {db.products.filter(x => x.category_id === otherManufacturer.category_id && x.manufacturer_id === otherManufacturer.id).map((product, index) => (
                             <Col md={3} className='mb-4 text-center' key={'column-' + product.product_id}>
                                 <article className="goods-card">
                                     <div className="goods-card__img">
@@ -75,7 +74,7 @@ const ProductCategoryPage = () => {
                                         <p style={{ fontSize: '0.9rem', color: '#777' }}>{product.price}$</p>
                                     </div>
                                     <a className="goods-card__btn" href="productDetail.html">
-                                        <Button variant="dark" className="w-100" href="/productdetail">Buy</Button>
+                                        <Button variant="dark" className="w-100" href={"/productdetail/" + product.id}>Buy</Button>
                                     </a>
                                 </article>
                             </Col>
@@ -92,7 +91,7 @@ const ProductCategoryPage = () => {
                 </div>
                 <div className='goods_list'>
                     <Row className='justify-content-center'>
-                        {db.products.filter(x => x.category_id == anotherManufacturer.category_id && x.manufacturer_id == anotherManufacturer.id).map((product, index) => (
+                        {db.products.filter(x => x.category_id === anotherManufacturer.category_id && x.manufacturer_id === anotherManufacturer.id).map((product, index) => (
                             <Col md={3} className='mb-4 text-center' key={'column-' + product.product_id}>
                                 <article className="goods-card">
                                     <div className="goods-card__img">
@@ -103,7 +102,7 @@ const ProductCategoryPage = () => {
                                         <p style={{ fontSize: '0.9rem', color: '#777' }}>{product.price}$</p>
                                     </div>
                                     <a className="goods-card__btn" href="productDetail.html">
-                                        <Button variant="dark" className="w-100" href="/productdetail">Buy</Button>
+                                        <Button variant="dark" className="w-100" href={"/productdetail/" + product.id}>Buy</Button>
                                     </a>
                                 </article>
                             </Col>
