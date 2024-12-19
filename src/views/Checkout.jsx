@@ -1,56 +1,71 @@
 import '../App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Form, Row, Col, Button} from 'react-bootstrap';
+import { Form, Row, Col, Button, Container } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate instead of useHistory
 
 const CheckoutPage = () => {
-    return (
-        <div className="CheckoutPage" style={{ width: '800px', float: 'center',margin: '50px auto 100px auto'}}>
-            <Form style={{ 
-                width: '500px', 
-                float: 'center', 
-                margin: '0 auto 0 auto',
-                padding: '50px 50px 50px 50px',
-                background: '#FCFCFC',
-                borderRadius: '5%'
-                }}>
-                <h3 style={{textAlign:'center', marginBottom: '20px'}}>Address Confirmation</h3>
-                <Form.Group className="mb-3" controlId="formGridAddress1">
-                    <Form.Label>Address</Form.Label>
-                    <Form.Control placeholder="1234 Main St" />
-                </Form.Group>
+    const navigate = useNavigate(); // Use useNavigate hook for navigation
 
-                <Form.Group className="mb-3" controlId="formGridAddress2">
-                    <Form.Label>Address 2</Form.Label>
-                    <Form.Control placeholder="Apartment, studio, or floor" />
+    const handlePayment = (e) => {
+        e.preventDefault(); // Prevent the default form submission
+
+        // Clear the cart from localStorage
+        localStorage.removeItem('cart');
+
+        // Set an alert flag in localStorage
+        localStorage.setItem('orderConfirmed', 'true');
+
+        // Redirect to the home page
+        navigate('/'); // Use navigate() to redirect to the home page
+    };
+
+    return (
+        <Container className="CheckoutPage py-4">
+            <Form
+                className="mx-auto p-4 shadow-sm rounded"
+                style={{
+                    maxWidth: '600px',
+                    background: '#FCFCFC',
+                }}
+                onSubmit={handlePayment} // Handle form submission with the custom function
+            >
+                <h3 className="text-center mb-4">Payment Information</h3>
+
+                <Form.Group className="mb-3" controlId="formGridCardNumber">
+                    <Form.Label>Card Number</Form.Label>
+                    <Form.Control type="text" placeholder="1234 5678 9101 1121" />
                 </Form.Group>
 
                 <Row className="mb-3">
-                    <Form.Group as={Col} controlId="formGridCity">
-                        <Form.Label>City</Form.Label>
-                        <Form.Control />
+                    <Form.Group as={Col} controlId="formGridExpirationDate">
+                        <Form.Label>Expiration Date</Form.Label>
+                        <Form.Control type="text" placeholder="MM/YY" />
                     </Form.Group>
 
-                    <Form.Group as={Col} controlId="formGridState">
-                        <Form.Label>State</Form.Label>
-                        <Form.Control />
-                    </Form.Group>
-
-                    <Form.Group as={Col} controlId="formGridZip">
-                        <Form.Label>Zip</Form.Label>
-                        <Form.Control />
+                    <Form.Group as={Col} controlId="formGridCVV">
+                        <Form.Label>CVV</Form.Label>
+                        <Form.Control type="text" placeholder="123" />
                     </Form.Group>
                 </Row>
 
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                    <Form.Check type="checkbox" label="Check me out" />
+                <Form.Group className="mb-3" controlId="formGridCardHolder">
+                    <Form.Label>Cardholder Name</Form.Label>
+                    <Form.Control type="text" placeholder="John Doe" />
                 </Form.Group>
 
-                <Button variant="primary" type="submit" style={{width: '150px', height: '40px'}} href='/orderconfirmation'>
-                    Submit
-                </Button>
+                <Form.Group className="mb-3" id="formGridBillingAddress">
+                    <Form.Label>Delivery Address</Form.Label>
+                    <Form.Control type="text" placeholder="1234 Main St, City, State, Zip" />
+                </Form.Group>
+
+                <div className="d-flex justify-content-center">
+                    <Button variant="primary" type="submit" style={{ width: '150px', height: '40px' }}>
+                        Pay Now
+                    </Button>
+                </div>
             </Form>
-        </div>
+        </Container>
     );
-}
+};
 
 export default CheckoutPage;

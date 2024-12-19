@@ -1,141 +1,152 @@
 import '../App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Row, Col, Button, Image} from 'react-bootstrap';
-
+import { Row, Col, Button, Image } from 'react-bootstrap';
 import xbox from '../assets/xbox.png';
-
-import NavigationBar from './NavigationBar';
 import MyCarousel from './Carousel';
-
-import db from '../assets/db/ProductDB.json';
-import { useParams } from 'react-router-dom';
-
+import { useParams, useLocation } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 const ProductCategoryPage = () => {
+    const { categoryName, manufacturerId } = useParams();
+    const location = useLocation();
+    const [products, setProducts] = useState([]);
+    const [featuredProducts, setFeaturedProducts] = useState([]);
+    const [manufacturerName, setManufacturerName] = useState('');
 
-    const { categoryId, manufacturerId } = useParams();
-    const anotherManufacturer = db.manufacturers.find(x => x.id !== manufacturerId && x.category_id === categoryId);
-    const otherManufacturer = db.manufacturers.find(x => x.id !== manufacturerId && x.id !== anotherManufacturer.id && x.category_id === categoryId );
- 
+    useEffect(() => {
+        getProducts();
+        getManufacturerName();
+    }, [manufacturerId]);
+
+    const getProducts = async () => {
+        try {
+            const response = await fetch('http://127.0.0.1:8000/api/products/');
+            if (!response.ok) {
+                throw new Error('Failed to fetch products');
+            }
+            const data = await response.json();
+
+            const filteredProducts = data.filter(
+                product => product.manufacturer === parseInt(manufacturerId, 10)
+            );
+
+            const otherProducts = data.filter(
+                product => product.manufacturer !== parseInt(manufacturerId, 10)
+            );
+
+            const shuffledOtherProducts = otherProducts.sort(() => 0.5 - Math.random());
+            const selectedFeaturedProducts = shuffledOtherProducts.slice(0, 4);
+
+            setProducts(filteredProducts);
+            setFeaturedProducts(selectedFeaturedProducts);
+        } catch (error) {
+            console.error('Error fetching products:', error);
+        }
+    };
+
+    const getManufacturerName = async () => {
+        try {
+            const response = await fetch(`http://127.0.0.1:8000/api/manufacturers/${manufacturerId}/`);
+            if (!response.ok) {
+                throw new Error('Failed to fetch manufacturer name');
+            }
+            const data = await response.json();
+            setManufacturerName(data.name);
+        } catch (error) {
+            console.error('Error fetching manufacturer name:', error);
+        }
+    };
+
     return (
-        <div className='ProductCategoryPage'>
-            <NavigationBar />
+        <div className="ProductCategoryPage">
             <MyCarousel />
 
-            <section className="goods container my-4">
-                <div className="d-flex justify-content-between align-items-center mb-4">
-                    <h3 className="title text-left mb-0" style={{ fontSize: '1.5rem', color: '#666' }}>
-                        {db.manufacturers.find(x => x.id === manufacturerId).name}
-                    </h3>
-                </div>
-                <div className='goods_list'>
-                    <Row className='justify-content-center'>
-                        {db.products.filter(x => x.category_id === categoryId && x.manufacturer_id === manufacturerId).map((product, index) => (
-                            <Col md={3} className='mb-4 text-center' key={'column-' + product.product_id}>
-                                <article className="goods-card">
-                                    <div className="goods-card__img">
-                                        <img src={require("../assets/" + product.imageSrc)} alt={product.name}  style={{maxWidth: "225px", minHeight: "200px", maxHeight:"200px"}}/>
-                                    </div>
-                                    <div className="goods-card__content">
-                                        <h4 style={{ fontSize: '1rem', color: '#555' }}>{product.name}</h4>
-                                        <p style={{ fontSize: '0.9rem', color: '#777' }}>{product.price}$</p>
-                                    </div>
-                                    <a className="goods-card__btn" href="productDetail.html">
-                                        <Button variant="dark" className="w-100" href={"/productdetail/" + product.id}>Buy</Button>
-                                    </a>
-                                </article>
-                            </Col>
-                        ))}
-                    </Row>
-                </div>
-            </section>
+            {/* Products Section */}
 
-            <div className="d-flex justify-content-center align-items-center" style={{ height: '30vh' }}>
-                <h2 className="text-center">Featured Products</h2>
-            </div>
+            <section className="goods container my-4 contentmy">
+    <div className="d-flex justify-content-between align-items-center mb-4">
+        <h3 className="title text-left mb-0" style={{ fontSize: '1.5rem', color: '#666' }}>
+            Products for {manufacturerName || 'Manufacturer'}
+        </h3>
+    </div>
+    <Row className="goods_list d-flex justify-content-center">
+        {products.length > 0 ? (
+            products.map((product) => (
+                <Col xs={12} sm={6} md={4} lg={3} className="mb-4 text-center" key={product.id}>
+                    <article className="goods-card">
+                        <div className="goods-card__img">
+                            <img
+                                src={product.image_src}
+                                alt={product.name}
+                                className="img-fluid"
+                                style={{
+                                    maxWidth: "225px",
+                                    minHeight: "200px",
+                                    maxHeight: "200px"
+                                }}
+                            />
+                        </div>
+                        <div className="goods-card__content">
+                            <h4 style={{ fontSize: '1rem', color: '#555' }}>{product.name}</h4>
+                            <p style={{ fontSize: '0.9rem', color: '#777' }}>{product.price}$</p>
+                        </div>
+                        <a className="goods-card__btn" href={`/productdetail/${product.id}`}>
+                            <Button variant="dark" className="w-100">Buy</Button>
+                        </a>
+                    </article>
+                </Col>
+            ))
+        ) : (
+            <p>No products available.</p>
+        )}
+    </Row>
+</section>
+
+
+            {/* Featured Products Section */}
+<section className="goods container my-4">
+    <div className="d-flex justify-content-between align-items-center mb-4">
+        <h3 className="title text-left mb-0" style={{ fontSize: '1.5rem', color: '#666' }}>
+            Featured Products
+        </h3>
+    </div>
+    <Row className="goods_list d-flex justify-content-center">
+        {featuredProducts.length > 0 ? (
+            featuredProducts.map((product) => (
+                <Col xs={12} sm={6} md={4} lg={3} className="mb-4 text-center" key={product.id}>
+                    <article className="goods-card">
+                        <div className="goods-card__img">
+                            <img
+                                src={product.image_src}
+                                alt={product.name}
+                                className="img-fluid"
+                                style={{
+                                    maxWidth: "225px",
+                                    minHeight: "200px",
+                                    maxHeight: "200px"
+                                }}
+                            />
+                        </div>
+                        <div className="goods-card__content">
+                            <h4 style={{ fontSize: '1rem', color: '#555' }}>{product.name}</h4>
+                            <p style={{ fontSize: '0.9rem', color: '#777' }}>{product.price}$</p>
+                        </div>
+                        <a className="goods-card__btn" href={`/productdetail/${product.id}`}>
+                            <Button variant="dark" className="w-100">Buy</Button>
+                        </a>
+                    </article>
+                </Col>
+            ))
+        ) : (
+            <p>No featured products available.</p>
+        )}
+    </Row>
+</section>
+
 
             
-            <section className="goods container my-4">
-                <div className="d-flex justify-content-between align-items-center mb-4">
-                    <h3 className="title text-left mb-0" style={{ fontSize: '1.5rem', color: '#666' }}>
-                        {otherManufacturer.name}
-                    </h3>
-                </div>
-                <div className='goods_list'>
-                    <Row className='justify-content-center'>
-                        {db.products.filter(x => x.category_id === otherManufacturer.category_id && x.manufacturer_id === otherManufacturer.id).map((product, index) => (
-                            <Col md={3} className='mb-4 text-center' key={'column-' + product.product_id}>
-                                <article className="goods-card">
-                                    <div className="goods-card__img">
-                                        <img src={require("../assets/" + product.imageSrc)} alt={product.name}   style={{maxWidth: "225px", minHeight: "200px", maxHeight:"200px"}}/>
-                                    </div>
-                                    <div className="goods-card__content">
-                                        <h4 style={{ fontSize: '1rem', color: '#555' }}>{product.name}</h4>
-                                        <p style={{ fontSize: '0.9rem', color: '#777' }}>{product.price}$</p>
-                                    </div>
-                                    <a className="goods-card__btn" href="productDetail.html">
-                                        <Button variant="dark" className="w-100" href={"/productdetail/" + product.id}>Buy</Button>
-                                    </a>
-                                </article>
-                            </Col>
-                        ))}
-                    </Row>
-                </div>
-            </section>
-
-            <section className="goods container my-4">
-                <div className="d-flex justify-content-between align-items-center mb-4">
-                    <h3 className="title text-left mb-0" style={{ fontSize: '1.5rem', color: '#666' }}>
-                        {anotherManufacturer.name}
-                    </h3>
-                </div>
-                <div className='goods_list'>
-                    <Row className='justify-content-center'>
-                        {db.products.filter(x => x.category_id === anotherManufacturer.category_id && x.manufacturer_id === anotherManufacturer.id).map((product, index) => (
-                            <Col md={3} className='mb-4 text-center' key={'column-' + product.product_id}>
-                                <article className="goods-card">
-                                    <div className="goods-card__img">
-                                        <img src={require("../assets/" + product.imageSrc)} alt={product.name}   style={{maxWidth: "225px", minHeight: "200px", maxHeight:"200px"}}/>
-                                    </div>
-                                    <div className="goods-card__content">
-                                        <h4 style={{ fontSize: '1rem', color: '#555' }}>{product.name}</h4>
-                                        <p style={{ fontSize: '0.9rem', color: '#777' }}>{product.price}$</p>
-                                    </div>
-                                    <a className="goods-card__btn" href="productDetail.html">
-                                        <Button variant="dark" className="w-100" href={"/productdetail/" + product.id}>Buy</Button>
-                                    </a>
-                                </article>
-                            </Col>
-                        ))}
-                    </Row>
-                </div>
-            </section>
-
-
-            <div className="text-center" style={{ position: "relative", display: "inline-block" }}>
-                <div className="Xbox_content" style={{
-                    position: "absolute",
-                    top: "20%",
-                    left: "250px",
-                    transform: "translateY(-50%)",
-                }}>
-                    <h4 style={{ fontSize: '2.5rem', color: '#000' }}>Xbox Wireless Controller</h4>
-                    <p style={{ fontSize: '1rem', color: '#333', width: '350px' }}>Textured triggers and bumpers I Hybrid D-pad I Button mapping I Bluetooth</p>
-                </div>
-
-                <Image src={xbox} fluid />
-            
-                <Button variant='dark' href='/productdetail' style={{
-                    position: "absolute",
-                    top: "90%",
-                    left: "90px",
-                    transform: "translateY(-50%)",
-                    width: '150px'
-                }}>ADD TO CART</Button>
-            </div>
-
         </div>
     );
-}
+};
 
 export default ProductCategoryPage;

@@ -1,6 +1,7 @@
 #navdropdown{
   text-decoration: none;
-  color: white
+  color: white;
+  
 }
 
 .new-product {
@@ -77,4 +78,177 @@
 
 .productdetailimg:hover{
   border: 1px solid #E3E3E3;
+}
+
+@media (min-width: 1025px) {
+  .h-custom {
+  height: 100vh !important;
+  }
+  }
+
+  @media (max-width: 768px) {
+    .Xbox_content {
+        top: 10%;
+        left: 50px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .xbox-featured img {
+        width: 100%;
+    }
+
+    .xbox-button {
+        top: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+    }
+}
+
+
+/* CSS for form input styling and border removal */
+.form-input {
+  border: none;
+  border-bottom: 2px solid #ccc;
+  border-radius: 0px;
+  margin-bottom: 15px;
+}
+
+.Login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #fcfcfc;
+  padding: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .Login form {
+      width: 90%;
+      padding: 20px;
+  }
+
+  .form-input {
+      font-size: 14px;
+  }
+
+  h3 {
+      font-size: 20px;
+  }
+
+  Button {
+      height: 40px;
+  }
+
+  .Login {
+      padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Login form {
+      width: 100%;
+      padding: 15px;
+  }
+
+  Button {
+      height: 40px;
+      font-size: 14px;
+  }
+
+  .form-input {
+      font-size: 13px;
+  }
+
+  h3 {
+      font-size: 18px;
+  }
+
+  .Login {
+      padding: 5px;
+  }
+}
+
+/* CSS for form input styling and border removal */
+.form-input {
+  border: none;
+  border-bottom: 2px solid #ccc;
+  border-radius: 0px;
+  margin-bottom: 15px;
+}
+
+.Register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #fcfcfc;
+  padding: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .Register form {
+      width: 90%;
+      padding: 20px;
+  }
+
+  .form-input {
+      font-size: 14px;
+  }
+
+  h3 {
+      font-size: 20px;
+  }
+
+  Button {
+      height: 40px;
+  }
+
+  .Register {
+      padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Register form {
+      width: 100%;
+      padding: 15px;
+  }
+
+  Button {
+      height: 40px;
+      font-size: 14px;
+  }
+
+  .form-input {
+      font-size: 13px;
+  }
+
+  h3 {
+      font-size: 18px;
+  }
+
+  .Register {
+      padding: 5px;
+  }
+}
+
+/* NavBarComp.css */
+
+.user-dropdown .dropdown-menu {
+  position: absolute !important; /* Prevents dropdown from affecting layout */
+  top: 100% !important; /* Aligns dropdown below the button */
+  left: 0 !important; /* Aligns dropdown to the left */
+  right: auto !important;
+  z-index: 9999; /* Ensures it appears above other content */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow for a more refined look */
+  width: max-content; /* Adjust dropdown width based on content */
+}
+
+.user-dropdown .dropdown-item {
+  padding: 10px 20px; /* Optional: Adjust padding for a better look */
 }

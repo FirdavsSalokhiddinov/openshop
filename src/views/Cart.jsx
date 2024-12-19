@@ -1,160 +1,251 @@
-import React, { useState } from 'react';
-import { Card, Button, Form, Row, Col } from 'react-bootstrap';
+import React, { useState, useEffect } from 'react';
+import { Button, Card, Col, Container, Row, Image } from 'react-bootstrap';
+import { BsFillTrashFill, BsCaretUpFill, BsCaretDownFill } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 
-function Cart() {
-  const [cartItems, setCartItems] = useState([
-    {
-      name: 'Iphone 12 pro',
-      price: 1300,
-      quantity: 1,
-    },
-    {
-      name: 'Iphone 13',
-      price: 1300,
-      quantity: 1,
-    },
-    {
-      name: 'Iphone 14pro',
-      price: 1450,
-      quantity: 1,
-    },
-  ]);
+const CartItem = ({ item, updateQuantity, removeItem }) => {
 
-  const [cardDetails, setCardDetails] = useState({
-    cardType: '',
-    cardNumber: '',
-    cardHolderName: '',
-    expiryDate: '',
-    cvv: '',
-  });
+    const [isLoggedIn, setLoggedIn] = useState(false);
+    const [username, setUsername] = useState("");
 
-  const handleQuantityChange = (index, newQuantity) => {
-    const updatedCartItems = [...cartItems];
-    updatedCartItems[index].quantity = newQuantity;
-    setCartItems(updatedCartItems);
-  };
+    useEffect(() => {
+        checkLoggedInUser();
+    },);
 
-  const handleCardInputChange = (event) => {
-    const { name, value } = event.target;
-    setCardDetails({ ...cardDetails, [name]: value });
-  };
-
-  const calculateTotal = () => {
-    return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
-  };
-
-  return (
-    <div>
-      <h2 className="text-center mb-4">Shopping Cart</h2>
-      <Row className="mb-4">
-        <Col md={8}>
-          {cartItems.map((item, index) => (
-            <Card key={index} className="mb-3">
-              <Card.Body>
-                <Card.Title>{item.name}</Card.Title>
-                <Card.Text>
-                  7 days delivery{' '}
-                  <span className="float-right">
-                    <Button
-                      variant="outline-secondary"
-                      onClick={() => handleQuantityChange(index, item.quantity - 1)}
-                      disabled={item.quantity === 1}
-                    >
-                      -
-                    </Button>{' '}
-                    {item.quantity}{' '}
-                    <Button
-                      variant="outline-secondary"
-                      onClick={() => handleQuantityChange(index, item.quantity + 1)}
-                    >
-                      +
-                    </Button>
-                  </span>
-                </Card.Text>
-                <Card.Text>
-                  Price: ${item.price}{' '}
-                  <span className="float-right">
-                    Total: ${item.price * item.quantity}
-                  </span>
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          ))}
-        </Col>
-        <Col md={4}>
-          <Card>
+    const checkLoggedInUser = async () => {
+        try {
+            const token = localStorage.getItem("accessToken");
+            if (token) {
+                const response = await fetch("http://127.0.0.1:8000/api/user/", {
+                    method: 'GET',
+                    headers: {
+                        "Authorization": `Bearer ${token}`
+                    }
+                });
+                if (response.ok) {
+                    const data = await response.json();
+                    setLoggedIn(true);
+                    setUsername(data.username);
+                } else {
+                    setLoggedIn(false);
+                    setUsername("");
+                }
+            } else {
+                setLoggedIn(false);
+                setUsername("");
+            }
+        } catch (error) {
+            setLoggedIn(false);
+            setUsername("");
+        }
+    };
+    return (
+        <Card className="mb-3">
             <Card.Body>
-              <Card.Title>Order Summary</Card.Title>
-              <Card.Text>
-                Subtotal: ${calculateTotal()}
-              </Card.Text>
-              <Card.Text>
-                Tax (8%): ${calculateTotal() * 0.08}
-              </Card.Text>
-              <Card.Text>
-                Total: ${calculateTotal() + calculateTotal() * 0.08}
-              </Card.Text>
-              <Form>
-                <Form.Group controlId="cardType">
-                  <Form.Label>Card Type</Form.Label>
-                  <Form.Control
-                    as="select"
-                    name="cardType"
-                    value={cardDetails.cardType}
-                    onChange={handleCardInputChange}
-                  >
-                    <option value="">Select Card Type</option>
-                    <option value="Visa">Visa</option>
-                    <option value="Mastercard">Mastercard</option>
-                    <option value="Amex">Amex</option>
-                  </Form.Control>
-                </Form.Group>
-                <Form.Group controlId="cardNumber">
-                  <Form.Label>Card Number</Form.Label>
-                  <Form.Control
-                    type="text"
-                    name="cardNumber"
-                    value={cardDetails.cardNumber}
-                    onChange={handleCardInputChange}
-                  />
-                </Form.Group>
-                <Form.Group controlId="cardHolderName">
-                  <Form.Label>Card Holder Name</Form.Label>
-                  <Form.Control
-                    type="text"
-                    name="cardHolderName"
-                    value={cardDetails.cardHolderName}
-                    onChange={handleCardInputChange}
-                  />
-                </Form.Group>
-                <Form.Group controlId="expiryDate">
-                  <Form.Label>Expiry Date</Form.Label>
-                  <Form.Control
-                    type="text"
-                    name="expiryDate"
-                    value={cardDetails.expiryDate}
-                    onChange={handleCardInputChange}
-                  />
-                </Form.Group>
-                <Form.Group controlId="cvv">
-                  <Form.Label>CVV</Form.Label>
-                  <Form.Control
-                    type="text"
-                    name="cvv"
-                    value={cardDetails.cvv}
-                    onChange={handleCardInputChange}
-                  />
-                </Form.Group>
-                <Button variant="primary" type="submit">
-                  Pay Now
-                </Button>
-              </Form>
+                <div className="d-flex justify-content-between">
+                    <div className="d-flex flex-row align-items-center">
+                        <Image src={item.imageSrc} fluid rounded style={{ width: "65px" }} alt="Shopping item" />
+                        <div className="ms-3">
+                            <h5>{item.name}</h5>
+                            <p className="small mb-0">{item.description}</p>
+                        </div>
+                    </div>
+                    <div className="d-flex flex-row align-items-center">
+                        <div style={{ width: "50px" }}>
+                            <h5 className="fw-normal mb-0">
+                                <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "10px" }}>
+                                    <p style={{ margin: 0, textAlign: "center" }}>{item.quantity}</p>
+                                    <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+                                        <BsCaretUpFill onClick={() => updateQuantity(item.id, item.quantity + 1)} />
+                                        <BsCaretDownFill onClick={() => updateQuantity(item.id, Math.max(1, item.quantity - 1))} />
+                                    </div>
+                                </div>
+                            </h5>
+                        </div>
+                        <div style={{ width: "80px" }}>
+                            <h5 className="mb-0">${(item.price * item.quantity).toFixed(2)}</h5>
+                        </div>
+                        <a href="#!" onClick={() => removeItem(item.id)} style={{ color: "#cecece" }}>
+                            <BsFillTrashFill />
+                        </a>
+                    </div>
+                </div>
             </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </div>
-  );
-}
+        </Card>
+    );
+};
 
-export default Cart;
+export default function Cart() {
+    const [cart, setCart] = useState([]);
+    const [isLoggedIn, setLoggedIn] = useState(false);
+    const [username, setUsername] = useState("");
+
+    const checkLoggedInUser = async () => {
+        try {
+            const token = localStorage.getItem("accessToken");
+            if (token) {
+                const response = await fetch("http://127.0.0.1:8000/api/user/", {
+                    method: 'GET',
+                    headers: {
+                        "Authorization": `Bearer ${token}`
+                    }
+                });
+                if (response.ok) {
+                    const data = await response.json();
+                    setLoggedIn(true);
+                    setUsername(data.username);
+                } else {
+                    setLoggedIn(false);
+                    setUsername("");
+                }
+            } else {
+                setLoggedIn(false);
+                setUsername("");
+            }
+        } catch (error) {
+            setLoggedIn(false);
+            setUsername("");
+        }
+    };
+
+    useEffect(() => {
+        const savedCart = JSON.parse(localStorage.getItem('cart')) || [];
+        setCart(savedCart);
+        
+        checkLoggedInUser();
+    }, []);
+
+    const updateQuantity = (id, newQuantity) => {
+        const updatedCart = cart.map(item =>
+            item.id === id ? { ...item, quantity: newQuantity } : item
+        );
+        setCart(updatedCart);
+        localStorage.setItem('cart', JSON.stringify(updatedCart));
+    };
+
+    const removeItem = (id) => {
+        const updatedCart = cart.filter(item => item.id !== id);
+        setCart(updatedCart);
+        localStorage.setItem('cart', JSON.stringify(updatedCart));
+    };
+
+    const total = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+
+    if (cart.length === 0) {
+        return (
+            <div className="EmptyCart">
+                <Container className="py-5" style={{ minHeight: '100vh' }}>
+                    <Row className="justify-content-center">
+                        <Col xs={12} md={8} lg={6}>
+                            <Card className="mb-4" style={{ border: 'none' }}>
+                                <Card.Body>
+                                    <div className="cartEmpty text-center">
+                                        <h4 className="py-4">Your cart is empty</h4>
+                                        {isLoggedIn ? (
+                                            <span></span>
+                                        ) : ( 
+                                            <p>Sign in to get notified for new off-sales</p>
+                                        )}
+                                        
+                                        <div className="shop py-4">
+                                        {isLoggedIn ? (
+                                            <span></span>
+                                        ) : ( 
+                                            <Button variant="primary" href="/login" style={{ width: '180px', height: '45px', borderRadius: '25px' }}>
+                                                Sign in
+                                            </Button>
+                                        )}
+                                            
+                                            <div className="pt-3">
+                                                <a href="/" style={{ textDecoration: 'none' }}>
+                                                    <p>Continue Shopping</p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </Card.Body>
+                            </Card>
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
+        );
+    }
+
+    return (
+        <section className="h-100">
+            <Container className="py-5 h-100">
+                <Row className="justify-content-center align-items-center h-100">
+                    <Col>
+                        <Card>
+                            <Card.Body className="p-4">
+                                <Row>
+                                    <Col lg="7">
+                                        <h5>Your Shopping Cart</h5>
+                                        <hr />
+                                        {cart.map((item) => (
+                                            <CartItem
+                                                key={item.id}
+                                                item={item}
+                                                updateQuantity={updateQuantity}
+                                                removeItem={removeItem}
+                                            />
+                                        ))}
+                                    </Col>
+
+                                    {/* Order Summary Section */}
+                                    <Col lg="5" style={{ padding: '20px', borderRadius: '10px', marginTop: '25px' }}>
+                                        <Card className="bg-white text-dark rounded-3">
+                                            <Card.Body>
+                                                <div className="d-flex justify-content-between align-items-center mb-4">
+                                                    <h5 className="mb-0">Order Summary</h5>
+                                                </div>
+
+                                                <div className="d-flex justify-content-between">
+                                                    <p className="mb-2">Subtotal</p>
+                                                    <p className="mb-2">${total.toFixed(2)}</p>
+                                                </div>
+
+                                                <div className="d-flex justify-content-between">
+                                                    <p className="mb-2">Shipping</p>
+                                                    <p className="mb-2">$20.00</p>
+                                                </div>
+
+                                                <div className="d-flex justify-content-between">
+                                                    <p className="mb-2">Total (Incl. taxes)</p>
+                                                    <p className="mb-2">${(total + 20).toFixed(2)}</p>
+                                                </div>
+
+                                                <div className="d-flex justify-content-end mt-4">
+                                                    <Link to="/checkout">
+                                                        <Button variant="primary" size="lg">Checkout</Button>
+                                                    </Link>
+                                                </div>
+                                            </Card.Body>
+                                        </Card>
+                                    </Col>
+                                </Row>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                </Row>
+            </Container>
+            
+            {/* Sign in prompt when cart is not empty */}
+            <div className="signInPrompt text-center py-4">
+                {isLoggedIn ? (
+                    <span></span>
+                ) : ( 
+                    <div>
+                        <p>Sign in to get notified for new off-sales</p>
+                        <Button variant="primary" href="/login" style={{ width: '180px', height: '45px', borderRadius: '25px' }}>
+                             Sign in
+                        </Button>
+                    </div>
+                )}
+            
+            </div>
+            
+        </section>
+    );
+}

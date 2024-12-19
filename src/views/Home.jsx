@@ -18,13 +18,11 @@ import top2 from '../assets/top/top2.png';
 import top3 from '../assets/top/top3.png';
 import top4 from '../assets/top/top4.png';
 import ps from '../assets/playstationimg.svg';
-import NavigationBar from './NavigationBar';
 import MyCarousel from './Carousel';
 
 const HomePage = () => {
     return (
         <div className="Home">
-            <NavigationBar />
             <MyCarousel />
             
             <Container className="new-product my-4">

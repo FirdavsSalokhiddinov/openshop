@@ -44,7 +44,7 @@
       "stock": 150,
       "imageSrc": "products/Phone/Apple/iphone1.png",
       "RelatedImagesSrc": ["products/Phone/Apple/iphone1.png", "products/Phone/Apple/iphone4.png", "products/Phone/Apple/iphone2.png", "products/Phone/Apple/iphone3.png"],
-      "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform", "8GB+256GB, 12GB+512GB", "LPDDR5X RAM + UFS 4.0 storage", "Main camera:50MP", "Depth camera:2MP"]
+      "Highlights": ["Processor - Snapdragon® 8 Gen 2 Mobile Platform, 8GB+256GB 12GB+512GB, LPDDR5X RAM + UFS 4.0 storage, Main camera:50MP, Depth camera:2MP"]
     },
     {
       "id": "2",
