@@ -1,0 +1,255 @@
+#navdropdown{
+    text-decoration: none;
+    color: white;
+    
+  }
+  
+  .new-product {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .product {
+    position: relative;
+  }
+  
+  .product__img img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .product__content {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .product__content h4,
+  .product__content p {
+    margin: 0;
+    font-size: 1rem;
+    color: #767575;
+  }
+  
+  /* Sale Badge */
+  .product__content--sale {
+    position: absolute;
+    top: 10px;
+    left: 250px; 
+    background-color: black;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 50%; 
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+  }
+  
+  
+  /* Layout for Right-Side Products */
+  .right-products {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 10px;
+  }
+  
+  /* Product 2: Full Width on Top */
+  .longer-product {
+    grid-row: 1 / 2;
+  }
+  
+  /* Products 3 and 4 side-by-side below Product 2 */
+  .small-products {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  
+  .product-item {
+    position: relative;
+  }
+  
+  .productdetailimg:hover{
+    border: 1px solid #E3E3E3;
+  }
+  
+  @media (min-width: 1025px) {
+    .h-custom {
+    height: 100vh !important;
+    }
+    }
+  
+    @media (max-width: 768px) {
+      .Xbox_content {
+          top: 10%;
+          left: 50px;
+          text-align: center;
+          width: 100%;
+      }
+  
+      .xbox-featured img {
+          width: 100%;
+      }
+  
+      .xbox-button {
+          top: auto;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 80%;
+      }
+  }
+  
+  
+  /* CSS for form input styling and border removal */
+  .form-input {
+    border: none;
+    border-bottom: 2px solid #ccc;
+    border-radius: 0px;
+    margin-bottom: 15px;
+  }
+  
+  .Login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fcfcfc;
+    padding: 20px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .Login form {
+        width: 90%;
+        padding: 20px;
+    }
+  
+    .form-input {
+        font-size: 14px;
+    }
+  
+    h3 {
+        font-size: 20px;
+    }
+  
+    Button {
+        height: 40px;
+    }
+  
+    .Login {
+        padding: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .Login form {
+        width: 100%;
+        padding: 15px;
+    }
+  
+    Button {
+        height: 40px;
+        font-size: 14px;
+    }
+  
+    .form-input {
+        font-size: 13px;
+    }
+  
+    h3 {
+        font-size: 18px;
+    }
+  
+    .Login {
+        padding: 5px;
+    }
+  }
+  
+  /* CSS for form input styling and border removal */
+  .form-input {
+    border: none;
+    border-bottom: 2px solid #ccc;
+    border-radius: 0px;
+    margin-bottom: 15px;
+  }
+  
+  .Register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fcfcfc;
+    padding: 20px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .Register form {
+        width: 90%;
+        padding: 20px;
+    }
+  
+    .form-input {
+        font-size: 14px;
+    }
+  
+    h3 {
+        font-size: 20px;
+    }
+  
+    Button {
+        height: 40px;
+    }
+  
+    .Register {
+        padding: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .Register form {
+        width: 100%;
+        padding: 15px;
+    }
+  
+    Button {
+        height: 40px;
+        font-size: 14px;
+    }
+  
+    .form-input {
+        font-size: 13px;
+    }
+  
+    h3 {
+        font-size: 18px;
+    }
+  
+    .Register {
+        padding: 5px;
+    }
+  }
+  
+  /* NavBarComp.css */
+  
+  .user-dropdown .dropdown-menu {
+    position: absolute !important; /* Prevents dropdown from affecting layout */
+    top: 100% !important; /* Aligns dropdown below the button */
+    left: 0 !important; /* Aligns dropdown to the left */
+    right: auto !important;
+    z-index: 9999; /* Ensures it appears above other content */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow for a more refined look */
+    width: max-content; /* Adjust dropdown width based on content */
+  }
+  
+  .user-dropdown .dropdown-item {
+    padding: 10px 20px; /* Optional: Adjust padding for a better look */
+  }
+  
