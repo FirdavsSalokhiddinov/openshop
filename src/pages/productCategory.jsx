@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Row, Col, Button, Image } from 'react-bootstrap';
 import { useParams, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import Carousel from '../components/carousel';
 
 const productCategory = () => {
     const { categoryName, manufacturerId } = useParams();
@@ -57,7 +58,7 @@ const productCategory = () => {
 
     return (
         <div className="ProductCategoryPage">
-            {/* <MyCarousel /> */}
+            <Carousel />
 
             {/* Products Section */}
 

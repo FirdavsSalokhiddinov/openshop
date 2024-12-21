@@ -1,22 +1,22 @@
 import '../App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Form, Row, Col, Button, Container } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate instead of useHistory
+import { useNavigate } from 'react-router-dom';
 
 const CheckoutPage = () => {
-    const navigate = useNavigate(); // Use useNavigate hook for navigation
+    const navigate = useNavigate();
 
     const handlePayment = (e) => {
-        e.preventDefault(); // Prevent the default form submission
+        e.preventDefault(); 
 
-        // Clear the cart from localStorage
+        
         localStorage.removeItem('cart');
 
-        // Set an alert flag in localStorage
+        
         localStorage.setItem('orderConfirmed', 'true');
 
-        // Redirect to the home page
-        navigate('/'); // Use navigate() to redirect to the home page
+        
+        navigate('/');
     };
 
     return (
@@ -27,7 +27,7 @@ const CheckoutPage = () => {
                     maxWidth: '600px',
                     background: '#FCFCFC',
                 }}
-                onSubmit={handlePayment} // Handle form submission with the custom function
+                onSubmit={handlePayment}
             >
                 <h3 className="text-center mb-4">Payment Information</h3>
 

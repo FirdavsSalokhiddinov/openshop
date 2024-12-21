@@ -12,7 +12,7 @@ const productDetail = () => {
 
     useEffect(() => {
         getProduct();
-    }, [productId]);  // Re-run when productId changes
+    }, [productId]);
 
     const getProduct = async () => {
         try {

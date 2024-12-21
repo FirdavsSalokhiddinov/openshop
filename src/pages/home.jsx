@@ -25,10 +25,9 @@ const Home = () => {
     };
 
     useEffect(() => {
-        // Replace IDs with actual manufacturer IDs from your backend
-        fetchProductsByManufacturer(1, setMobileProducts); // Manufacturer = Mobile
-        fetchProductsByManufacturer(2, setLaptopProducts); // Manufacturer = Laptop
-        fetchProductsByManufacturer(3, setConsoleProducts); // Manufactu
+        fetchProductsByManufacturer(1, setMobileProducts);
+        fetchProductsByManufacturer(2, setLaptopProducts);
+        fetchProductsByManufacturer(3, setConsoleProducts);
     }, []);
 
     const renderProductSection = (title, products) => (
